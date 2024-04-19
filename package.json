@@ -1,0 +1,14 @@
+{
+  "name": "infusioncodigocafeinado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dataFireBill": "json-server js/db/bill.json -p 5600"
+  },
+  "author": "Sh4un221",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
+  }
+}

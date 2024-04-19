@@ -1,0 +1,23 @@
+@import url(variables.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto-Regular";
+}
+.main {
+    background: var(--layout-box-x);
+    /* background: red; */
+}
+.section__details {
+    text-align: center;
+}
+.details__table {
+
+}
+.details__table thead{
+    background: orange;
+}
+/* .details__table tbody tr{
+    border: 1px solid red;
+} */
