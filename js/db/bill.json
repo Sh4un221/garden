@@ -9,8 +9,51 @@
                     "quantity": 2,
                     "price": 100,
                     "total": 200 
+                },
+                {
+                    "descript": "Incluye versión desktop y mobile",
+                    "quantity": 2,
+                    "price": 100,
+                    "total": 200 
+                },
+                {
+                    "descript": "Incluye versión desktop y mobile",
+                    "quantity": 2,
+                    "price": 100,
+                    "total": 200 
+                },
+                {
+                    "descript": "arroz con pollo",
+                    "quantity": 1,
+                    "price": 1000000,
+                    "total": 1000000 
+                },
+                {
+                    "descript": "Incluye versión desktop y mobile",
+                    "quantity": 2,
+                    "price": 100,
+                    "total": 200 
+                },
+                {
+                    "descript": "Incluye versión desktop y mobile",
+                    "quantity": 2,
+                    "price": 100,
+                    "total": 200 
+                },
+                {
+                    "descript": "Incluye versión desktop y mobile",
+                    "quantity": 2,
+                    "price": 100,
+                    "total": 200 
+                },
+                {
+                    "descript": "Incluye versión desktop y mobile",
+                    "quantity": 2,
+                    "price": 100,
+                    "total": 200 
                 }
             ]
         }
+        
     ]
 }
