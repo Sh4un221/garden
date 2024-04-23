@@ -4,7 +4,7 @@ import {
 } from "./module/offices.js"
 
 import{
-    getAllNameSurnamesAndEmail,
+    getAllNameSurnamesAndEmailInCargeOfBossSeven,
     getAll
 } from "./module/employees.js"
 // console.log(await getAllOfficesCodeAndCity());
