@@ -1,5 +1,5 @@
 {
-  "type":"module",
+  "type": "module",
   "name": "infusioncodigocafeinado",
   "version": "1.0.0",
   "description": "",
@@ -18,6 +18,7 @@
   "author": "Sh4un221",
   "license": "ISC",
   "dependencies": {
+    "@formkit/tempo": "^0.1.1",
     "fs": "^0.0.1-security",
     "json-server": "^1.0.0-alpha.23"
   }
