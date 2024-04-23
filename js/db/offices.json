@@ -1,0 +1,103 @@
+{
+    "offices":[
+        {
+            "code_office": "BCN-ES",
+            "city": "Barcelona",
+            "country": "Espa\u00f1a",
+            "region": "Barcelona",
+            "postal_code": "08019",
+            "movil": "+34 93 3561182",
+            "address1": "Avenida Diagonal, 38",
+            "address2": "3A escalera Derecha",
+            "id": 1
+        },
+        {
+            "code_office": "BOS-USA",
+            "city": "Boston",
+            "country": "EEUU",
+            "region": "MA",
+            "postal_code": "02108",
+            "movil": "+1 215 837 0825",
+            "address1": "1550 Court Place",
+            "address2": "Suite 102",
+            "id": 2
+        },
+        {
+            "code_office": "LON-UK",
+            "city": "Londres",
+            "country": "Inglaterra",
+            "region": "EMEA",
+            "postal_code": "EC2N 1HN",
+            "movil": "+44 20 78772041",
+            "address1": "52 Old Broad Street",
+            "address2": "Ground Floor",
+            "id": 3
+        },
+        {
+            "code_office": "MAD-ES",
+            "city": "Madrid",
+            "country": "Espa\u00f1a",
+            "region": "Madrid",
+            "postal_code": "28032",
+            "movil": "+34 91 7514487",
+            "address1": "Bulevar Indalecio Prieto, 32",
+            "address2": "",
+            "id": 4
+        },
+        {
+            "code_office": "PAR-FR",
+            "city": "Paris",
+            "country": "Francia",
+            "region": "EMEA",
+            "postal_code": "75017",
+            "movil": "+33 14 723 4404",
+            "address1": "29 Rue Jouffroy d'abbans",
+            "address2": "",
+            "id": 5
+        },
+        {
+            "code_office": "SFC-USA",
+            "city": "San Francisco",
+            "country": "EEUU",
+            "region": "CA",
+            "postal_code": "94080",
+            "movil": "+1 650 219 4782",
+            "address1": "100 Market Street",
+            "address2": "Suite 300",
+            "id": 6
+        },
+        {
+            "code_office": "SYD-AU",
+            "city": "Sydney",
+            "country": "Australia",
+            "region": "APAC",
+            "postal_code": "NSW 2010",
+            "movil": "+61 2 9264 2451",
+            "address1": "5-11 Wentworth Avenue",
+            "address2": "Floor #2",
+            "id": 7
+        },
+        {
+            "code_office": "TAL-ES",
+            "city": "Talavera de la Reina",
+            "country": "Espa\u00f1a",
+            "region": "Castilla-LaMancha",
+            "postal_code": "45632",
+            "movil": "+34 925 867231",
+            "address1": "Francisco Aguirre, 32",
+            "address2": "5\u00ba piso (exterior)",
+            "id": 8
+        },
+        {
+            "code_office": "TOK-JP",
+            "city": "Tokyo",
+            "country": "Jap\u00f3n",
+            "region": "Chiyoda-Ku",
+            "postal_code": "102-8578",
+            "movil": "+81 33 224 5000",
+            "address1": "4-1 Kioicho",
+            "address2": "",
+            "id": 9
+        }
+    ]
+}

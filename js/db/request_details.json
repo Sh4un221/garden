@@ -1,0 +1,2581 @@
+{
+  "request_details":[
+      {
+          "code_request": 1,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 3,
+          "id": 1
+      },
+      {
+          "code_request": 1,
+          "product_code": "OR-127",
+          "quantity": 40,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 2
+      },
+      {
+          "code_request": 1,
+          "product_code": "OR-141",
+          "quantity": 25,
+          "unit_price": 4.0,
+          "line_number": 2,
+          "id": 3
+      },
+      {
+          "code_request": 1,
+          "product_code": "OR-241",
+          "quantity": 15,
+          "unit_price": 19.0,
+          "line_number": 4,
+          "id": 4
+      },
+      {
+          "code_request": 1,
+          "product_code": "OR-99",
+          "quantity": 23,
+          "unit_price": 14.0,
+          "line_number": 5,
+          "id": 5
+      },
+      {
+          "code_request": 2,
+          "product_code": "FR-4",
+          "quantity": 3,
+          "unit_price": 29.0,
+          "line_number": 6,
+          "id": 6
+      },
+      {
+          "code_request": 2,
+          "product_code": "FR-40",
+          "quantity": 7,
+          "unit_price": 8.0,
+          "line_number": 7,
+          "id": 7
+      },
+      {
+          "code_request": 2,
+          "product_code": "OR-140",
+          "quantity": 50,
+          "unit_price": 4.0,
+          "line_number": 3,
+          "id": 8
+      },
+      {
+          "code_request": 2,
+          "product_code": "OR-141",
+          "quantity": 20,
+          "unit_price": 5.0,
+          "line_number": 2,
+          "id": 9
+      },
+      {
+          "code_request": 2,
+          "product_code": "OR-159",
+          "quantity": 12,
+          "unit_price": 6.0,
+          "line_number": 5,
+          "id": 10
+      },
+      {
+          "code_request": 2,
+          "product_code": "OR-227",
+          "quantity": 67,
+          "unit_price": 64.0,
+          "line_number": 1,
+          "id": 11
+      },
+      {
+          "code_request": 2,
+          "product_code": "OR-247",
+          "quantity": 5,
+          "unit_price": 462.0,
+          "line_number": 4,
+          "id": 12
+      },
+      {
+          "code_request": 3,
+          "product_code": "FR-48",
+          "quantity": 120,
+          "unit_price": 9.0,
+          "line_number": 6,
+          "id": 13
+      },
+      {
+          "code_request": 3,
+          "product_code": "OR-122",
+          "quantity": 32,
+          "unit_price": 5.0,
+          "line_number": 4,
+          "id": 14
+      },
+      {
+          "code_request": 3,
+          "product_code": "OR-123",
+          "quantity": 11,
+          "unit_price": 5.0,
+          "line_number": 5,
+          "id": 15
+      },
+      {
+          "code_request": 3,
+          "product_code": "OR-213",
+          "quantity": 30,
+          "unit_price": 266.0,
+          "line_number": 1,
+          "id": 16
+      },
+      {
+          "code_request": 3,
+          "product_code": "OR-217",
+          "quantity": 15,
+          "unit_price": 65.0,
+          "line_number": 2,
+          "id": 17
+      },
+      {
+          "code_request": 3,
+          "product_code": "OR-218",
+          "quantity": 24,
+          "unit_price": 25.0,
+          "line_number": 3,
+          "id": 18
+      },
+      {
+          "code_request": 4,
+          "product_code": "FR-31",
+          "quantity": 12,
+          "unit_price": 8.0,
+          "line_number": 7,
+          "id": 19
+      },
+      {
+          "code_request": 4,
+          "product_code": "FR-34",
+          "quantity": 42,
+          "unit_price": 8.0,
+          "line_number": 6,
+          "id": 20
+      },
+      {
+          "code_request": 4,
+          "product_code": "FR-40",
+          "quantity": 42,
+          "unit_price": 9.0,
+          "line_number": 8,
+          "id": 21
+      },
+      {
+          "code_request": 4,
+          "product_code": "OR-152",
+          "quantity": 3,
+          "unit_price": 6.0,
+          "line_number": 5,
+          "id": 22
+      },
+      {
+          "code_request": 4,
+          "product_code": "OR-156",
+          "quantity": 4,
+          "unit_price": 6.0,
+          "line_number": 3,
+          "id": 23
+      },
+      {
+          "code_request": 4,
+          "product_code": "OR-157",
+          "quantity": 38,
+          "unit_price": 10.0,
+          "line_number": 2,
+          "id": 24
+      },
+      {
+          "code_request": 4,
+          "product_code": "OR-222",
+          "quantity": 21,
+          "unit_price": 59,
+          "line_number": 1,
+          "id": 25
+      },
+      {
+          "code_request": 8,
+          "product_code": "FR-106",
+          "quantity": 3,
+          "unit_price": 11,
+          "line_number": 1,
+          "id": 26
+      },
+      {
+          "code_request": 8,
+          "product_code": "FR-108",
+          "quantity": 1,
+          "unit_price": 32,
+          "line_number": 2,
+          "id": 27
+      },
+      {
+          "code_request": 8,
+          "product_code": "FR-11",
+          "quantity": 10,
+          "unit_price": 100,
+          "line_number": 3,
+          "id": 28
+      },
+      {
+          "code_request": 9,
+          "product_code": "AR-001",
+          "quantity": 80,
+          "unit_price": 1,
+          "line_number": 3,
+          "id": 29
+      },
+      {
+          "code_request": 9,
+          "product_code": "AR-008",
+          "quantity": 450,
+          "unit_price": 1,
+          "line_number": 2,
+          "id": 30
+      },
+      {
+          "code_request": 9,
+          "product_code": "FR-106",
+          "quantity": 80,
+          "unit_price": 8,
+          "line_number": 1,
+          "id": 31
+      },
+      {
+          "code_request": 9,
+          "product_code": "FR-69",
+          "quantity": 15,
+          "unit_price": 91,
+          "line_number": 2,
+          "id": 32
+      },
+      {
+          "code_request": 10,
+          "product_code": "FR-82",
+          "quantity": 5,
+          "unit_price": 70,
+          "line_number": 2,
+          "id": 33
+      },
+      {
+          "code_request": 10,
+          "product_code": "FR-91",
+          "quantity": 30,
+          "unit_price": 75,
+          "line_number": 1,
+          "id": 34
+      },
+      {
+          "code_request": 10,
+          "product_code": "OR-234",
+          "quantity": 5,
+          "unit_price": 64,
+          "line_number": 3,
+          "id": 35
+      },
+      {
+          "code_request": 11,
+          "product_code": "AR-006",
+          "quantity": 180,
+          "unit_price": 1,
+          "line_number": 3,
+          "id": 36
+      },
+      {
+          "code_request": 11,
+          "product_code": "OR-247",
+          "quantity": 80,
+          "unit_price": 8,
+          "line_number": 1,
+          "id": 37
+      },
+      {
+          "code_request": 12,
+          "product_code": "AR-009",
+          "quantity": 290,
+          "unit_price": 1,
+          "line_number": 1,
+          "id": 38
+      },
+      {
+          "code_request": 13,
+          "product_code": "11679",
+          "quantity": 5,
+          "unit_price": 14,
+          "line_number": 1,
+          "id": 39
+      },
+      {
+          "code_request": 13,
+          "product_code": "21636",
+          "quantity": 12,
+          "unit_price": 14,
+          "line_number": 2,
+          "id": 40
+      },
+      {
+          "code_request": 13,
+          "product_code": "FR-11",
+          "quantity": 5,
+          "unit_price": 100,
+          "line_number": 3,
+          "id": 41
+      },
+      {
+          "code_request": 14,
+          "product_code": "FR-100",
+          "quantity": 8,
+          "unit_price": 11.0,
+          "line_number": 2,
+          "id": 42
+      },
+      {
+          "code_request": 14,
+          "product_code": "FR-13",
+          "quantity": 13,
+          "unit_price": 57.0,
+          "line_number": 1,
+          "id": 43
+      },
+      {
+          "code_request": 15,
+          "product_code": "FR-84",
+          "quantity": 4,
+          "unit_price": 13.0,
+          "line_number": 3,
+          "id": 44
+      },
+      {
+          "code_request": 15,
+          "product_code": "OR-101",
+          "quantity": 2,
+          "unit_price": 6.0,
+          "line_number": 2,
+          "id": 45
+      },
+      {
+          "code_request": 15,
+          "product_code": "OR-156",
+          "quantity": 6,
+          "unit_price": 10.0,
+          "line_number": 1,
+          "id": 46
+      },
+      {
+          "code_request": 15,
+          "product_code": "OR-203",
+          "quantity": 9,
+          "unit_price": 10.0,
+          "line_number": 4,
+          "id": 47
+      },
+      {
+          "code_request": 16,
+          "product_code": "30310",
+          "quantity": 12,
+          "unit_price": 12.0,
+          "line_number": 1,
+          "id": 48
+      },
+      {
+          "code_request": 16,
+          "product_code": "FR-36",
+          "quantity": 10,
+          "unit_price": 9.0,
+          "line_number": 2,
+          "id": 49
+      },
+      {
+          "code_request": 17,
+          "product_code": "11679",
+          "quantity": 5,
+          "unit_price": 14.0,
+          "line_number": 1,
+          "id": 50
+      },
+      {
+          "code_request": 17,
+          "product_code": "22225",
+          "quantity": 5,
+          "unit_price": 12.0,
+          "line_number": 3,
+          "id": 51
+      },
+      {
+          "code_request": 17,
+          "product_code": "FR-37",
+          "quantity": 5,
+          "unit_price": 9.0,
+          "line_number": 2,
+          "id": 52
+      },
+      {
+          "code_request": 17,
+          "product_code": "FR-64",
+          "quantity": 5,
+          "unit_price": 22.0,
+          "line_number": 4,
+          "id": 53
+      },
+      {
+          "code_request": 17,
+          "product_code": "OR-136",
+          "quantity": 5,
+          "unit_price": 18.0,
+          "line_number": 5,
+          "id": 54
+      },
+      {
+          "code_request": 18,
+          "product_code": "22225",
+          "quantity": 4,
+          "unit_price": 12.0,
+          "line_number": 2,
+          "id": 55
+      },
+      {
+          "code_request": 18,
+          "product_code": "FR-22",
+          "quantity": 2,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 56
+      },
+      {
+          "code_request": 18,
+          "product_code": "OR-159",
+          "quantity": 10,
+          "unit_price": 6.0,
+          "line_number": 3,
+          "id": 57
+      },
+      {
+          "code_request": 19,
+          "product_code": "30310",
+          "quantity": 9,
+          "unit_price": 12.0,
+          "line_number": 5,
+          "id": 58
+      },
+      {
+          "code_request": 19,
+          "product_code": "FR-23",
+          "quantity": 6,
+          "unit_price": 8.0,
+          "line_number": 4,
+          "id": 59
+      },
+      {
+          "code_request": 19,
+          "product_code": "FR-75",
+          "quantity": 1,
+          "unit_price": 32.0,
+          "line_number": 2,
+          "id": 60
+      },
+      {
+          "code_request": 19,
+          "product_code": "FR-84",
+          "quantity": 5,
+          "unit_price": 13.0,
+          "line_number": 1,
+          "id": 61
+      },
+      {
+          "code_request": 19,
+          "product_code": "OR-208",
+          "quantity": 20,
+          "unit_price": 4.0,
+          "line_number": 3,
+          "id": 62
+      },
+      {
+          "code_request": 20,
+          "product_code": "11679",
+          "quantity": 14,
+          "unit_price": 14.0,
+          "line_number": 1,
+          "id": 63
+      },
+      {
+          "code_request": 20,
+          "product_code": "30310",
+          "quantity": 8,
+          "unit_price": 12.0,
+          "line_number": 2,
+          "id": 64
+      },
+      {
+          "code_request": 21,
+          "product_code": "21636",
+          "quantity": 5,
+          "unit_price": 14.0,
+          "line_number": 3,
+          "id": 65
+      },
+      {
+          "code_request": 21,
+          "product_code": "FR-18",
+          "quantity": 22,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 66
+      },
+      {
+          "code_request": 21,
+          "product_code": "FR-53",
+          "quantity": 3,
+          "unit_price": 8.0,
+          "line_number": 2,
+          "id": 67
+      },
+      {
+          "code_request": 22,
+          "product_code": "OR-240",
+          "quantity": 1,
+          "unit_price": 6.0,
+          "line_number": 1,
+          "id": 68
+      },
+      {
+          "code_request": 23,
+          "product_code": "AR-002",
+          "quantity": 110,
+          "unit_price": 1.0,
+          "line_number": 4,
+          "id": 69
+      },
+      {
+          "code_request": 23,
+          "product_code": "FR-107",
+          "quantity": 50,
+          "unit_price": 22.0,
+          "line_number": 3,
+          "id": 70
+      },
+      {
+          "code_request": 23,
+          "product_code": "FR-85",
+          "quantity": 4,
+          "unit_price": 70.0,
+          "line_number": 2,
+          "id": 71
+      },
+      {
+          "code_request": 23,
+          "product_code": "OR-249",
+          "quantity": 30,
+          "unit_price": 5.0,
+          "line_number": 1,
+          "id": 72
+      },
+      {
+          "code_request": 24,
+          "product_code": "22225",
+          "quantity": 3,
+          "unit_price": 15.0,
+          "line_number": 1,
+          "id": 73
+      },
+      {
+          "code_request": 24,
+          "product_code": "FR-1",
+          "quantity": 4,
+          "unit_price": 7.0,
+          "line_number": 4,
+          "id": 74
+      },
+      {
+          "code_request": 24,
+          "product_code": "FR-23",
+          "quantity": 2,
+          "unit_price": 7.0,
+          "line_number": 2,
+          "id": 75
+      },
+      {
+          "code_request": 24,
+          "product_code": "OR-241",
+          "quantity": 10,
+          "unit_price": 20.0,
+          "line_number": 3,
+          "id": 76
+      },
+      {
+          "code_request": 25,
+          "product_code": "FR-77",
+          "quantity": 15,
+          "unit_price": 69.0,
+          "line_number": 1,
+          "id": 77
+      },
+      {
+          "code_request": 25,
+          "product_code": "FR-9",
+          "quantity": 4,
+          "unit_price": 30.0,
+          "line_number": 3,
+          "id": 78
+      },
+      {
+          "code_request": 25,
+          "product_code": "FR-94",
+          "quantity": 10,
+          "unit_price": 30.0,
+          "line_number": 2,
+          "id": 79
+      },
+      {
+          "code_request": 26,
+          "product_code": "FR-15",
+          "quantity": 9,
+          "unit_price": 25.0,
+          "line_number": 3,
+          "id": 80
+      },
+      {
+          "code_request": 26,
+          "product_code": "OR-188",
+          "quantity": 4,
+          "unit_price": 25.0,
+          "line_number": 1,
+          "id": 81
+      },
+      {
+          "code_request": 26,
+          "product_code": "OR-218",
+          "quantity": 14,
+          "unit_price": 25.0,
+          "line_number": 2,
+          "id": 82
+      },
+      {
+          "code_request": 27,
+          "product_code": "OR-101",
+          "quantity": 22,
+          "unit_price": 6.0,
+          "line_number": 2,
+          "id": 83
+      },
+      {
+          "code_request": 27,
+          "product_code": "OR-102",
+          "quantity": 22,
+          "unit_price": 6.0,
+          "line_number": 3,
+          "id": 84
+      },
+      {
+          "code_request": 27,
+          "product_code": "OR-186",
+          "quantity": 40,
+          "unit_price": 6.0,
+          "line_number": 1,
+          "id": 85
+      },
+      {
+          "code_request": 28,
+          "product_code": "FR-11",
+          "quantity": 8,
+          "unit_price": 99.0,
+          "line_number": 3,
+          "id": 86
+      },
+      {
+          "code_request": 28,
+          "product_code": "OR-213",
+          "quantity": 3,
+          "unit_price": 266.0,
+          "line_number": 2,
+          "id": 87
+      },
+      {
+          "code_request": 28,
+          "product_code": "OR-247",
+          "quantity": 1,
+          "unit_price": 462.0,
+          "line_number": 1,
+          "id": 88
+      },
+      {
+          "code_request": 29,
+          "product_code": "FR-82",
+          "quantity": 4,
+          "unit_price": 70.0,
+          "line_number": 4,
+          "id": 89
+      },
+      {
+          "code_request": 29,
+          "product_code": "FR-9",
+          "quantity": 4,
+          "unit_price": 28.0,
+          "line_number": 1,
+          "id": 90
+      },
+      {
+          "code_request": 29,
+          "product_code": "FR-94",
+          "quantity": 20,
+          "unit_price": 31.0,
+          "line_number": 5,
+          "id": 91
+      },
+      {
+          "code_request": 29,
+          "product_code": "OR-129",
+          "quantity": 2,
+          "unit_price": 111.0,
+          "line_number": 2,
+          "id": 92
+      },
+      {
+          "code_request": 29,
+          "product_code": "OR-160",
+          "quantity": 10,
+          "unit_price": 9.0,
+          "line_number": 3,
+          "id": 93
+      },
+      {
+          "code_request": 30,
+          "product_code": "AR-004",
+          "quantity": 10,
+          "unit_price": 1.0,
+          "line_number": 6,
+          "id": 94
+      },
+      {
+          "code_request": 30,
+          "product_code": "FR-108",
+          "quantity": 2,
+          "unit_price": 32.0,
+          "line_number": 2,
+          "id": 95
+      },
+      {
+          "code_request": 30,
+          "product_code": "FR-12",
+          "quantity": 2,
+          "unit_price": 19.0,
+          "line_number": 3,
+          "id": 96
+      },
+      {
+          "code_request": 30,
+          "product_code": "FR-72",
+          "quantity": 4,
+          "unit_price": 31.0,
+          "line_number": 5,
+          "id": 97
+      },
+      {
+          "code_request": 30,
+          "product_code": "FR-89",
+          "quantity": 10,
+          "unit_price": 45.0,
+          "line_number": 1,
+          "id": 98
+      },
+      {
+          "code_request": 30,
+          "product_code": "OR-120",
+          "quantity": 5,
+          "unit_price": 5.0,
+          "line_number": 4,
+          "id": 99
+      },
+      {
+          "code_request": 31,
+          "product_code": "AR-009",
+          "quantity": 25,
+          "unit_price": 2.0,
+          "line_number": 3,
+          "id": 100
+      },
+      {
+          "code_request": 31,
+          "product_code": "FR-102",
+          "quantity": 1,
+          "unit_price": 20.0,
+          "line_number": 1,
+          "id": 101
+      },
+      {
+          "code_request": 31,
+          "product_code": "FR-4",
+          "quantity": 6,
+          "unit_price": 29.0,
+          "line_number": 2,
+          "id": 102
+      },
+      {
+          "code_request": 32,
+          "product_code": "11679",
+          "quantity": 1,
+          "unit_price": 14.0,
+          "line_number": 4,
+          "id": 103
+      },
+      {
+          "code_request": 32,
+          "product_code": "21636",
+          "quantity": 4,
+          "unit_price": 15.0,
+          "line_number": 5,
+          "id": 104
+      },
+      {
+          "code_request": 32,
+          "product_code": "22225",
+          "quantity": 1,
+          "unit_price": 15.0,
+          "line_number": 3,
+          "id": 105
+      },
+      {
+          "code_request": 32,
+          "product_code": "OR-128",
+          "quantity": 29,
+          "unit_price": 100.0,
+          "line_number": 2,
+          "id": 106
+      },
+      {
+          "code_request": 32,
+          "product_code": "OR-193",
+          "quantity": 5,
+          "unit_price": 20.0,
+          "line_number": 1,
+          "id": 107
+      },
+      {
+          "code_request": 33,
+          "product_code": "FR-17",
+          "quantity": 423,
+          "unit_price": 2.0,
+          "line_number": 4,
+          "id": 108
+      },
+      {
+          "code_request": 33,
+          "product_code": "FR-29",
+          "quantity": 120,
+          "unit_price": 8.0,
+          "line_number": 3,
+          "id": 109
+      },
+      {
+          "code_request": 33,
+          "product_code": "OR-214",
+          "quantity": 212,
+          "unit_price": 10.0,
+          "line_number": 2,
+          "id": 110
+      },
+      {
+          "code_request": 33,
+          "product_code": "OR-247",
+          "quantity": 150,
+          "unit_price": 462.0,
+          "line_number": 1,
+          "id": 111
+      },
+      {
+          "code_request": 34,
+          "product_code": "FR-3",
+          "quantity": 56,
+          "unit_price": 7.0,
+          "line_number": 4,
+          "id": 112
+      },
+      {
+          "code_request": 34,
+          "product_code": "FR-7",
+          "quantity": 12,
+          "unit_price": 29.0,
+          "line_number": 3,
+          "id": 113
+      },
+      {
+          "code_request": 34,
+          "product_code": "OR-172",
+          "quantity": 20,
+          "unit_price": 18.0,
+          "line_number": 1,
+          "id": 114
+      },
+      {
+          "code_request": 34,
+          "product_code": "OR-174",
+          "quantity": 24,
+          "unit_price": 18.0,
+          "line_number": 2,
+          "id": 115
+      },
+      {
+          "code_request": 35,
+          "product_code": "21636",
+          "quantity": 12,
+          "unit_price": 14.0,
+          "line_number": 4,
+          "id": 116
+      },
+      {
+          "code_request": 35,
+          "product_code": "FR-47",
+          "quantity": 55,
+          "unit_price": 8.0,
+          "line_number": 3,
+          "id": 117
+      },
+      {
+          "code_request": 35,
+          "product_code": "OR-165",
+          "quantity": 3,
+          "unit_price": 10.0,
+          "line_number": 2,
+          "id": 118
+      },
+      {
+          "code_request": 35,
+          "product_code": "OR-181",
+          "quantity": 36,
+          "unit_price": 10.0,
+          "line_number": 1,
+          "id": 119
+      },
+      {
+          "code_request": 35,
+          "product_code": "OR-225",
+          "quantity": 72,
+          "unit_price": 10.0,
+          "line_number": 5,
+          "id": 120
+      },
+      {
+          "code_request": 36,
+          "product_code": "30310",
+          "quantity": 4,
+          "unit_price": 12.0,
+          "line_number": 2,
+          "id": 121
+      },
+      {
+          "code_request": 36,
+          "product_code": "FR-1",
+          "quantity": 2,
+          "unit_price": 7,
+          "line_number": 3,
+          "id": 122
+      },
+      {
+          "code_request": 36,
+          "product_code": "OR-147",
+          "quantity": 6,
+          "unit_price": 7,
+          "line_number": 4,
+          "id": 123
+      },
+      {
+          "code_request": 36,
+          "product_code": "OR-203",
+          "quantity": 1,
+          "unit_price": 12,
+          "line_number": 5,
+          "id": 124
+      },
+      {
+          "code_request": 36,
+          "product_code": "OR-99",
+          "quantity": 15,
+          "unit_price": 13,
+          "line_number": 1,
+          "id": 125
+      },
+      {
+          "code_request": 37,
+          "product_code": "FR-105",
+          "quantity": 4,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 126
+      },
+      {
+          "code_request": 37,
+          "product_code": "FR-57",
+          "quantity": 203,
+          "unit_price": 8,
+          "line_number": 2,
+          "id": 127
+      },
+      {
+          "code_request": 37,
+          "product_code": "OR-176",
+          "quantity": 38,
+          "unit_price": 10,
+          "line_number": 3,
+          "id": 128
+      },
+      {
+          "code_request": 38,
+          "product_code": "11679",
+          "quantity": 5,
+          "unit_price": 14,
+          "line_number": 1,
+          "id": 129
+      },
+      {
+          "code_request": 38,
+          "product_code": "21636",
+          "quantity": 2,
+          "unit_price": 14,
+          "line_number": 2,
+          "id": 130
+      },
+      {
+          "code_request": 39,
+          "product_code": "22225",
+          "quantity": 3,
+          "unit_price": 12,
+          "line_number": 1,
+          "id": 131
+      },
+      {
+          "code_request": 39,
+          "product_code": "30310",
+          "quantity": 6,
+          "unit_price": 12,
+          "line_number": 2,
+          "id": 132
+      },
+      {
+          "code_request": 40,
+          "product_code": "AR-001",
+          "quantity": 4,
+          "unit_price": 1,
+          "line_number": 1,
+          "id": 133
+      },
+      {
+          "code_request": 40,
+          "product_code": "AR-002",
+          "quantity": 8,
+          "unit_price": 1,
+          "line_number": 2,
+          "id": 134
+      },
+      {
+          "code_request": 41,
+          "product_code": "AR-003",
+          "quantity": 5,
+          "unit_price": 1,
+          "line_number": 1,
+          "id": 135
+      },
+      {
+          "code_request": 41,
+          "product_code": "AR-004",
+          "quantity": 5,
+          "unit_price": 1,
+          "line_number": 2,
+          "id": 136
+      },
+      {
+          "code_request": 42,
+          "product_code": "AR-005",
+          "quantity": 3,
+          "unit_price": 1,
+          "line_number": 1,
+          "id": 137
+      },
+      {
+          "code_request": 42,
+          "product_code": "AR-006",
+          "quantity": 1,
+          "unit_price": 1,
+          "line_number": 2,
+          "id": 138
+      },
+      {
+          "code_request": 43,
+          "product_code": "AR-007",
+          "quantity": 9,
+          "unit_price": 1.0,
+          "line_number": 1,
+          "id": 139
+      },
+      {
+          "code_request": 44,
+          "product_code": "AR-008",
+          "quantity": 5,
+          "unit_price": 1.0,
+          "line_number": 1,
+          "id": 140
+      },
+      {
+          "code_request": 45,
+          "product_code": "AR-009",
+          "quantity": 6,
+          "unit_price": 1.0,
+          "line_number": 1,
+          "id": 141
+      },
+      {
+          "code_request": 45,
+          "product_code": "AR-010",
+          "quantity": 4,
+          "unit_price": 1.0,
+          "line_number": 2,
+          "id": 142
+      },
+      {
+          "code_request": 46,
+          "product_code": "FR-1",
+          "quantity": 4,
+          "unit_price": 7.0,
+          "line_number": 1,
+          "id": 143
+      },
+      {
+          "code_request": 46,
+          "product_code": "FR-10",
+          "quantity": 8,
+          "unit_price": 7.0,
+          "line_number": 2,
+          "id": 144
+      },
+      {
+          "code_request": 47,
+          "product_code": "FR-100",
+          "quantity": 9,
+          "unit_price": 11.0,
+          "line_number": 1,
+          "id": 145
+      },
+      {
+          "code_request": 47,
+          "product_code": "FR-101",
+          "quantity": 5,
+          "unit_price": 13.0,
+          "line_number": 2,
+          "id": 146
+      },
+      {
+          "code_request": 48,
+          "product_code": "FR-102",
+          "quantity": 1,
+          "unit_price": 18.0,
+          "line_number": 1,
+          "id": 147
+      },
+      {
+          "code_request": 48,
+          "product_code": "FR-103",
+          "quantity": 1,
+          "unit_price": 25.0,
+          "line_number": 2,
+          "id": 148
+      },
+      {
+          "code_request": 48,
+          "product_code": "OR-234",
+          "quantity": 50,
+          "unit_price": 64.0,
+          "line_number": 1,
+          "id": 149
+      },
+      {
+          "code_request": 48,
+          "product_code": "OR-236",
+          "quantity": 45,
+          "unit_price": 49.0,
+          "line_number": 2,
+          "id": 150
+      },
+      {
+          "code_request": 48,
+          "product_code": "OR-237",
+          "quantity": 50,
+          "unit_price": 19.0,
+          "line_number": 3,
+          "id": 151
+      },
+      {
+          "code_request": 49,
+          "product_code": "OR-204",
+          "quantity": 50,
+          "unit_price": 10.0,
+          "line_number": 1,
+          "id": 152
+      },
+      {
+          "code_request": 49,
+          "product_code": "OR-205",
+          "quantity": 10,
+          "unit_price": 10.0,
+          "line_number": 2,
+          "id": 153
+      },
+      {
+          "code_request": 49,
+          "product_code": "OR-206",
+          "quantity": 5,
+          "unit_price": 5.0,
+          "line_number": 3,
+          "id": 154
+      },
+      {
+          "code_request": 50,
+          "product_code": "OR-225",
+          "quantity": 12,
+          "unit_price": 10,
+          "line_number": 1,
+          "id": 155
+      },
+      {
+          "code_request": 50,
+          "product_code": "OR-226",
+          "quantity": 15,
+          "unit_price": 38,
+          "line_number": 2,
+          "id": 156
+      },
+      {
+          "code_request": 50,
+          "product_code": "OR-227",
+          "quantity": 44,
+          "unit_price": 64,
+          "line_number": 3,
+          "id": 157
+      },
+      {
+          "code_request": 51,
+          "product_code": "OR-209",
+          "quantity": 50,
+          "unit_price": 10,
+          "line_number": 1,
+          "id": 158
+      },
+      {
+          "code_request": 51,
+          "product_code": "OR-210",
+          "quantity": 80,
+          "unit_price": 39,
+          "line_number": 2,
+          "id": 159
+      },
+      {
+          "code_request": 51,
+          "product_code": "OR-211",
+          "quantity": 70,
+          "unit_price": 59,
+          "line_number": 3,
+          "id": 160
+      },
+      {
+          "code_request": 53,
+          "product_code": "FR-2",
+          "quantity": 1,
+          "unit_price": 7,
+          "line_number": 1,
+          "id": 161
+      },
+      {
+          "code_request": 53,
+          "product_code": "FR-85",
+          "quantity": 1,
+          "unit_price": 70,
+          "line_number": 3,
+          "id": 162
+      },
+      {
+          "code_request": 53,
+          "product_code": "FR-86",
+          "quantity": 2,
+          "unit_price": 11,
+          "line_number": 2,
+          "id": 163
+      },
+      {
+          "code_request": 53,
+          "product_code": "OR-116",
+          "quantity": 6,
+          "unit_price": 7,
+          "line_number": 4,
+          "id": 164
+      },
+      {
+          "code_request": 54,
+          "product_code": "11679",
+          "quantity": 3,
+          "unit_price": 14,
+          "line_number": 3,
+          "id": 165
+      },
+      {
+          "code_request": 54,
+          "product_code": "FR-100",
+          "quantity": 45,
+          "unit_price": 10,
+          "line_number": 2,
+          "id": 166
+      },
+      {
+          "code_request": 54,
+          "product_code": "FR-18",
+          "quantity": 5,
+          "unit_price": 4,
+          "line_number": 1,
+          "id": 167
+      },
+      {
+          "code_request": 54,
+          "product_code": "FR-79",
+          "quantity": 3,
+          "unit_price": 22,
+          "line_number": 4,
+          "id": 168
+      },
+      {
+          "code_request": 54,
+          "product_code": "OR-116",
+          "quantity": 8,
+          "unit_price": 7,
+          "line_number": 6,
+          "id": 169
+      },
+      {
+          "code_request": 54,
+          "product_code": "OR-123",
+          "quantity": 3,
+          "unit_price": 5,
+          "line_number": 5,
+          "id": 170
+      },
+      {
+          "code_request": 54,
+          "product_code": "OR-168",
+          "quantity": 2,
+          "unit_price": 10,
+          "line_number": 7,
+          "id": 171
+      },
+      {
+          "code_request": 55,
+          "product_code": "OR-115",
+          "quantity": 9,
+          "unit_price": 7,
+          "line_number": 1,
+          "id": 172
+      },
+      {
+          "code_request": 55,
+          "product_code": "OR-213",
+          "quantity": 2,
+          "unit_price": 266,
+          "line_number": 2,
+          "id": 173
+      },
+      {
+          "code_request": 55,
+          "product_code": "OR-227",
+          "quantity": 6,
+          "unit_price": 64,
+          "line_number": 5,
+          "id": 174
+      },
+      {
+          "code_request": 55,
+          "product_code": "OR-243",
+          "quantity": 2,
+          "unit_price": 64,
+          "line_number": 4,
+          "id": 175
+      },
+      {
+          "code_request": 55,
+          "product_code": "OR-247",
+          "quantity": 1,
+          "unit_price": 462,
+          "line_number": 3,
+          "id": 176
+      },
+      {
+          "code_request": 56,
+          "product_code": "OR-129",
+          "quantity": 1,
+          "unit_price": 115,
+          "line_number": 5,
+          "id": 177
+      },
+      {
+          "code_request": 56,
+          "product_code": "OR-130",
+          "quantity": 10,
+          "unit_price": 18,
+          "line_number": 6,
+          "id": 178
+      },
+      {
+          "code_request": 56,
+          "product_code": "OR-179",
+          "quantity": 1,
+          "unit_price": 6,
+          "line_number": 3,
+          "id": 179
+      },
+      {
+          "code_request": 56,
+          "product_code": "OR-196",
+          "quantity": 3,
+          "unit_price": 10,
+          "line_number": 4,
+          "id": 180
+      },
+      {
+          "code_request": 56,
+          "product_code": "OR-207",
+          "quantity": 4,
+          "unit_price": 4,
+          "line_number": 2,
+          "id": 181
+      },
+      {
+          "code_request": 56,
+          "product_code": "OR-250",
+          "quantity": 3,
+          "unit_price": 10,
+          "line_number": 1,
+          "id": 182
+      },
+      {
+          "code_request": 57,
+          "product_code": "FR-69",
+          "quantity": 6,
+          "unit_price": 91,
+          "line_number": 4,
+          "id": 183
+      },
+      {
+          "code_request": 57,
+          "product_code": "FR-81",
+          "quantity": 3,
+          "unit_price": 49,
+          "line_number": 3,
+          "id": 184
+      },
+      {
+          "code_request": 57,
+          "product_code": "FR-84",
+          "quantity": 2,
+          "unit_price": 13,
+          "line_number": 1,
+          "id": 185
+      },
+      {
+          "code_request": 57,
+          "product_code": "FR-94",
+          "quantity": 6,
+          "unit_price": 9,
+          "line_number": 2,
+          "id": 186
+      },
+      {
+          "code_request": 58,
+          "product_code": "OR-102",
+          "quantity": 65,
+          "unit_price": 18.0,
+          "line_number": 3,
+          "id": 187
+      },
+      {
+          "code_request": 58,
+          "product_code": "OR-139",
+          "quantity": 80,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 188
+      },
+      {
+          "code_request": 58,
+          "product_code": "OR-172",
+          "quantity": 69,
+          "unit_price": 15.0,
+          "line_number": 2,
+          "id": 189
+      },
+      {
+          "code_request": 58,
+          "product_code": "OR-177",
+          "quantity": 150,
+          "unit_price": 15.0,
+          "line_number": 4,
+          "id": 190
+      },
+      {
+          "code_request": 74,
+          "product_code": "FR-67",
+          "quantity": 15,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 191
+      },
+      {
+          "code_request": 74,
+          "product_code": "OR-227",
+          "quantity": 34,
+          "unit_price": 64.0,
+          "line_number": 2,
+          "id": 192
+      },
+      {
+          "code_request": 74,
+          "product_code": "OR-247",
+          "quantity": 42,
+          "unit_price": 8.0,
+          "line_number": 3,
+          "id": 193
+      },
+      {
+          "code_request": 75,
+          "product_code": "AR-006",
+          "quantity": 60,
+          "unit_price": 1.0,
+          "line_number": 2,
+          "id": 194
+      },
+      {
+          "code_request": 75,
+          "product_code": "FR-87",
+          "quantity": 24,
+          "unit_price": 22.0,
+          "line_number": 3,
+          "id": 195
+      },
+      {
+          "code_request": 75,
+          "product_code": "OR-157",
+          "quantity": 46,
+          "unit_price": 10.0,
+          "line_number": 1,
+          "id": 196
+      },
+      {
+          "code_request": 76,
+          "product_code": "AR-009",
+          "quantity": 250,
+          "unit_price": 1.0,
+          "line_number": 5,
+          "id": 197
+      },
+      {
+          "code_request": 76,
+          "product_code": "FR-79",
+          "quantity": 40,
+          "unit_price": 22.0,
+          "line_number": 3,
+          "id": 198
+      },
+      {
+          "code_request": 76,
+          "product_code": "FR-87",
+          "quantity": 24,
+          "unit_price": 22.0,
+          "line_number": 4,
+          "id": 199
+      },
+      {
+          "code_request": 76,
+          "product_code": "FR-94",
+          "quantity": 35,
+          "unit_price": 9.0,
+          "line_number": 1,
+          "id": 200
+      },
+      {
+          "code_request": 76,
+          "product_code": "OR-196",
+          "quantity": 25,
+          "unit_price": 10.0,
+          "line_number": 2,
+          "id": 201
+      },
+      {
+          "code_request": 77,
+          "product_code": "22225",
+          "quantity": 34,
+          "unit_price": 12.0,
+          "line_number": 2,
+          "id": 202
+      },
+      {
+          "code_request": 77,
+          "product_code": "30310",
+          "quantity": 15,
+          "unit_price": 12.0,
+          "line_number": 1,
+          "id": 203
+      },
+      {
+          "code_request": 78,
+          "product_code": "FR-53",
+          "quantity": 25,
+          "unit_price": 8.0,
+          "line_number": 2,
+          "id": 204
+      },
+      {
+          "code_request": 78,
+          "product_code": "FR-85",
+          "quantity": 56,
+          "unit_price": 70.0,
+          "line_number": 3,
+          "id": 205
+      },
+      {
+          "code_request": 78,
+          "product_code": "OR-157",
+          "quantity": 42,
+          "unit_price": 10.0,
+          "line_number": 4,
+          "id": 206
+      },
+      {
+          "code_request": 78,
+          "product_code": "OR-208",
+          "quantity": 30,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 207
+      },
+      {
+          "code_request": 79,
+          "product_code": "OR-240",
+          "quantity": 50,
+          "unit_price": 6.0,
+          "line_number": 1,
+          "id": 208
+      },
+      {
+          "code_request": 80,
+          "product_code": "FR-11",
+          "quantity": 40,
+          "unit_price": 100.0,
+          "line_number": 3,
+          "id": 209
+      },
+      {
+          "code_request": 80,
+          "product_code": "FR-36",
+          "quantity": 47,
+          "unit_price": 9.0,
+          "line_number": 2,
+          "id": 210
+      },
+      {
+          "code_request": 80,
+          "product_code": "OR-136",
+          "quantity": 75,
+          "unit_price": 18.0,
+          "line_number": 1,
+          "id": 211
+      },
+      {
+          "code_request": 81,
+          "product_code": "OR-208",
+          "quantity": 30,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 212
+      },
+      {
+          "code_request": 82,
+          "product_code": "OR-227",
+          "quantity": 34,
+          "unit_price": 64.0,
+          "line_number": 1,
+          "id": 213
+      },
+      {
+          "code_request": 83,
+          "product_code": "OR-208",
+          "quantity": 30,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 214
+      },
+      {
+          "code_request": 89,
+          "product_code": "FR-108",
+          "quantity": 3,
+          "unit_price": 32.0,
+          "line_number": 2,
+          "id": 215
+      },
+      {
+          "code_request": 89,
+          "product_code": "FR-3",
+          "quantity": 15,
+          "unit_price": 7.0,
+          "line_number": 6,
+          "id": 216
+      },
+      {
+          "code_request": 89,
+          "product_code": "FR-42",
+          "quantity": 12,
+          "unit_price": 8.0,
+          "line_number": 4,
+          "id": 217
+      },
+      {
+          "code_request": 89,
+          "product_code": "FR-66",
+          "quantity": 5,
+          "unit_price": 49.0,
+          "line_number": 1,
+          "id": 218
+      },
+      {
+          "code_request": 89,
+          "product_code": "FR-87",
+          "quantity": 4,
+          "unit_price": 22.0,
+          "line_number": 3,
+          "id": 219
+      },
+      {
+          "code_request": 89,
+          "product_code": "OR-157",
+          "quantity": 8,
+          "unit_price": 10.0,
+          "line_number": 5,
+          "id": 220
+      },
+      {
+          "code_request": 90,
+          "product_code": "AR-001",
+          "quantity": 19,
+          "unit_price": 1.0,
+          "line_number": 1,
+          "id": 221
+      },
+      {
+          "code_request": 90,
+          "product_code": "AR-002",
+          "quantity": 10,
+          "unit_price": 1.0,
+          "line_number": 2,
+          "id": 222
+      },
+      {
+          "code_request": 90,
+          "product_code": "AR-003",
+          "quantity": 12,
+          "unit_price": 1.0,
+          "line_number": 3,
+          "id": 223
+      },
+      {
+          "code_request": 91,
+          "product_code": "FR-100",
+          "quantity": 52,
+          "unit_price": 11.0,
+          "line_number": 1,
+          "id": 224
+      },
+      {
+          "code_request": 91,
+          "product_code": "FR-101",
+          "quantity": 14,
+          "unit_price": 13.0,
+          "line_number": 2,
+          "id": 225
+      },
+      {
+          "code_request": 91,
+          "product_code": "FR-102",
+          "quantity": 35,
+          "unit_price": 18.0,
+          "line_number": 3,
+          "id": 226
+      },
+      {
+          "code_request": 92,
+          "product_code": "FR-108",
+          "quantity": 12,
+          "unit_price": 23.0,
+          "line_number": 1,
+          "id": 227
+      },
+      {
+          "code_request": 92,
+          "product_code": "FR-11",
+          "quantity": 20,
+          "unit_price": 100.0,
+          "line_number": 2,
+          "id": 228
+      },
+      {
+          "code_request": 92,
+          "product_code": "FR-12",
+          "quantity": 30,
+          "unit_price": 21.0,
+          "line_number": 3,
+          "id": 229
+      },
+      {
+          "code_request": 93,
+          "product_code": "FR-54",
+          "quantity": 25,
+          "unit_price": 9.0,
+          "line_number": 1,
+          "id": 230
+      },
+      {
+          "code_request": 93,
+          "product_code": "FR-58",
+          "quantity": 51,
+          "unit_price": 11.0,
+          "line_number": 2,
+          "id": 231
+      },
+      {
+          "code_request": 93,
+          "product_code": "FR-60",
+          "quantity": 3,
+          "unit_price": 32.0,
+          "line_number": 3,
+          "id": 232
+      },
+      {
+          "code_request": 94,
+          "product_code": "11679",
+          "quantity": 12,
+          "unit_price": 14.0,
+          "line_number": 1,
+          "id": 233
+      },
+      {
+          "code_request": 94,
+          "product_code": "FR-11",
+          "quantity": 33,
+          "unit_price": 100.0,
+          "line_number": 3,
+          "id": 234
+      },
+      {
+          "code_request": 94,
+          "product_code": "FR-4",
+          "quantity": 79,
+          "unit_price": 29.0,
+          "line_number": 2,
+          "id": 235
+      },
+      {
+          "code_request": 95,
+          "product_code": "FR-10",
+          "quantity": 9,
+          "unit_price": 7.0,
+          "line_number": 2,
+          "id": 236
+      },
+      {
+          "code_request": 95,
+          "product_code": "FR-75",
+          "quantity": 6,
+          "unit_price": 32.0,
+          "line_number": 1,
+          "id": 237
+      },
+      {
+          "code_request": 95,
+          "product_code": "FR-82",
+          "quantity": 5,
+          "unit_price": 70.0,
+          "line_number": 3,
+          "id": 238
+      },
+      {
+          "code_request": 96,
+          "product_code": "FR-43",
+          "quantity": 6,
+          "unit_price": 8.0,
+          "line_number": 1,
+          "id": 239
+      },
+      {
+          "code_request": 96,
+          "product_code": "FR-6",
+          "quantity": 16,
+          "unit_price": 7.0,
+          "line_number": 4,
+          "id": 240
+      },
+      {
+          "code_request": 96,
+          "product_code": "FR-71",
+          "quantity": 10,
+          "unit_price": 22.0,
+          "line_number": 3,
+          "id": 241
+      },
+      {
+          "code_request": 96,
+          "product_code": "FR-90",
+          "quantity": 4,
+          "unit_price": 70.0,
+          "line_number": 2,
+          "id": 242
+      },
+      {
+          "code_request": 97,
+          "product_code": "FR-41",
+          "quantity": 12,
+          "unit_price": 8.0,
+          "line_number": 1,
+          "id": 243
+      },
+      {
+          "code_request": 97,
+          "product_code": "FR-54",
+          "quantity": 14,
+          "unit_price": 9.0,
+          "line_number": 2,
+          "id": 244
+      },
+      {
+          "code_request": 97,
+          "product_code": "OR-156",
+          "quantity": 10,
+          "unit_price": 10.0,
+          "line_number": 3,
+          "id": 245
+      },
+      {
+          "code_request": 98,
+          "product_code": "FR-33",
+          "quantity": 14,
+          "unit_price": 8.0,
+          "line_number": 4,
+          "id": 246
+      },
+      {
+          "code_request": 98,
+          "product_code": "FR-56",
+          "quantity": 16,
+          "unit_price": 8.0,
+          "line_number": 3,
+          "id": 247
+      },
+      {
+          "code_request": 98,
+          "product_code": "FR-60",
+          "quantity": 8,
+          "unit_price": 32.0,
+          "line_number": 1,
+          "id": 248
+      },
+      {
+          "code_request": 98,
+          "product_code": "FR-8",
+          "quantity": 18,
+          "unit_price": 6.0,
+          "line_number": 5,
+          "id": 249
+      },
+      {
+          "code_request": 98,
+          "product_code": "FR-85",
+          "quantity": 6,
+          "unit_price": 70.0,
+          "line_number": 2,
+          "id": 250
+      },
+      {
+          "code_request": 99,
+          "product_code": "OR-157",
+          "quantity": 15,
+          "unit_price": 10.0,
+          "line_number": 2,
+          "id": 251
+      },
+      {
+          "code_request": 99,
+          "product_code": "OR-227",
+          "quantity": 30,
+          "unit_price": 64.0,
+          "line_number": 1,
+          "id": 252
+      },
+      {
+          "code_request": 100,
+          "product_code": "FR-87",
+          "quantity": 20,
+          "unit_price": 22.0,
+          "line_number": 1,
+          "id": 253
+      },
+      {
+          "code_request": 100,
+          "product_code": "FR-94",
+          "quantity": 40,
+          "unit_price": 9.0,
+          "line_number": 2,
+          "id": 254
+      },
+      {
+          "code_request": 101,
+          "product_code": "AR-006",
+          "quantity": 50,
+          "unit_price": 1.0,
+          "line_number": 1,
+          "id": 255
+      },
+      {
+          "code_request": 101,
+          "product_code": "AR-009",
+          "quantity": 159,
+          "unit_price": 1.0,
+          "line_number": 2,
+          "id": 256
+      },
+      {
+          "code_request": 102,
+          "product_code": "22225",
+          "quantity": 32,
+          "unit_price": 12.0,
+          "line_number": 2,
+          "id": 257
+      },
+      {
+          "code_request": 102,
+          "product_code": "30310",
+          "quantity": 23,
+          "unit_price": 12.0,
+          "line_number": 1,
+          "id": 258
+      },
+      {
+          "code_request": 103,
+          "product_code": "FR-53",
+          "quantity": 12,
+          "unit_price": 8.0,
+          "line_number": 2,
+          "id": 259
+      },
+      {
+          "code_request": 103,
+          "product_code": "OR-208",
+          "quantity": 52,
+          "unit_price": 4.0,
+          "line_number": 1,
+          "id": 260
+      },
+      {
+          "code_request": 104,
+          "product_code": "FR-85",
+          "quantity": 9,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 261
+      },
+      {
+          "code_request": 104,
+          "product_code": "OR-157",
+          "quantity": 113,
+          "unit_price": 10.0,
+          "line_number": 2,
+          "id": 262
+      },
+      {
+          "code_request": 105,
+          "product_code": "OR-227",
+          "quantity": 21,
+          "unit_price": 64.0,
+          "line_number": 2,
+          "id": 263
+      },
+      {
+          "code_request": 105,
+          "product_code": "OR-240",
+          "quantity": 27,
+          "unit_price": 6.0,
+          "line_number": 1,
+          "id": 264
+      },
+      {
+          "code_request": 106,
+          "product_code": "AR-009",
+          "quantity": 231,
+          "unit_price": 1.0,
+          "line_number": 1,
+          "id": 265
+      },
+      {
+          "code_request": 106,
+          "product_code": "OR-136",
+          "quantity": 47,
+          "unit_price": 18.0,
+          "line_number": 2,
+          "id": 266
+      },
+      {
+          "code_request": 107,
+          "product_code": "30310",
+          "quantity": 143,
+          "unit_price": 12.0,
+          "line_number": 2,
+          "id": 267
+      },
+      {
+          "code_request": 107,
+          "product_code": "FR-11",
+          "quantity": 15,
+          "unit_price": 100.0,
+          "line_number": 1,
+          "id": 268
+      },
+      {
+          "code_request": 108,
+          "product_code": "FR-53",
+          "quantity": 53,
+          "unit_price": 8.0,
+          "line_number": 1,
+          "id": 269
+      },
+      {
+          "code_request": 108,
+          "product_code": "OR-208",
+          "quantity": 59,
+          "unit_price": 4.0,
+          "line_number": 2,
+          "id": 270
+      },
+      {
+          "code_request": 109,
+          "product_code": "FR-22",
+          "quantity": 8,
+          "unit_price": 4.0,
+          "line_number": 5,
+          "id": 271
+      },
+      {
+          "code_request": 109,
+          "product_code": "FR-36",
+          "quantity": 12,
+          "unit_price": 9.0,
+          "line_number": 3,
+          "id": 272
+      },
+      {
+          "code_request": 109,
+          "product_code": "FR-45",
+          "quantity": 14,
+          "unit_price": 8.0,
+          "line_number": 4,
+          "id": 273
+      },
+      {
+          "code_request": 109,
+          "product_code": "OR-104",
+          "quantity": 20,
+          "unit_price": 10.0,
+          "line_number": 1,
+          "id": 274
+      },
+      {
+          "code_request": 109,
+          "product_code": "OR-119",
+          "quantity": 10,
+          "unit_price": 5.0,
+          "line_number": 2,
+          "id": 275
+      },
+      {
+          "code_request": 109,
+          "product_code": "OR-125",
+          "quantity": 3,
+          "unit_price": 5.0,
+          "line_number": 6,
+          "id": 276
+      },
+      {
+          "code_request": 109,
+          "product_code": "OR-130",
+          "quantity": 2,
+          "unit_price": 18.0,
+          "line_number": 7,
+          "id": 277
+      },
+      {
+          "code_request": 110,
+          "product_code": "AR-010",
+          "quantity": 6,
+          "unit_price": 1.0,
+          "line_number": 3,
+          "id": 278
+      },
+      {
+          "code_request": 110,
+          "product_code": "FR-1",
+          "quantity": 14,
+          "unit_price": 7.0,
+          "line_number": 1,
+          "id": 279
+      },
+      {
+          "code_request": 110,
+          "product_code": "FR-16",
+          "quantity": 1,
+          "unit_price": 45.0,
+          "line_number": 2,
+          "id": 280
+      },
+      {
+          "code_request": 116,
+          "product_code": "21636",
+          "quantity": 5,
+          "unit_price": 14.0,
+          "line_number": 1,
+          "id": 281
+      },
+      {
+          "code_request": 116,
+          "product_code": "AR-001",
+          "quantity": 32,
+          "unit_price": 1.0,
+          "line_number": 2,
+          "id": 282
+      },
+      {
+          "code_request": 116,
+          "product_code": "AR-005",
+          "quantity": 18,
+          "unit_price": 1.0,
+          "line_number": 5,
+          "id": 283
+      },
+      {
+          "code_request": 116,
+          "product_code": "FR-33",
+          "quantity": 13,
+          "unit_price": 8.0,
+          "line_number": 3,
+          "id": 284
+      },
+      {
+          "code_request": 116,
+          "product_code": "OR-200",
+          "quantity": 10,
+          "unit_price": 4.0,
+          "line_number": 4,
+          "id": 285
+      },
+      {
+          "code_request": 117,
+          "product_code": "FR-78",
+          "quantity": 2,
+          "unit_price": 15.0,
+          "line_number": 1,
+          "id": 286
+      },
+      {
+          "code_request": 117,
+          "product_code": "FR-80",
+          "quantity": 1,
+          "unit_price": 32.0,
+          "line_number": 3,
+          "id": 287
+      },
+      {
+          "code_request": 117,
+          "product_code": "OR-146",
+          "quantity": 17,
+          "unit_price": 4.0,
+          "line_number": 2,
+          "id": 288
+      },
+      {
+          "code_request": 117,
+          "product_code": "OR-179",
+          "quantity": 4,
+          "unit_price": 6.0,
+          "line_number": 4,
+          "id": 289
+      },
+      {
+          "code_request": 128,
+          "product_code": "AR-004",
+          "quantity": 15,
+          "unit_price": 1.0,
+          "line_number": 1,
+          "id": 290
+      },
+      {
+          "code_request": 128,
+          "product_code": "OR-150",
+          "quantity": 18,
+          "unit_price": 2.0,
+          "line_number": 2,
+          "id": 291
+      },
+      {
+          "code_request": 52,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 292
+      },
+      {
+          "code_request": 59,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 293
+      },
+      {
+          "code_request": 60,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 294
+      },
+      {
+          "code_request": 61,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 295
+      },
+      {
+          "code_request": 62,
+          "product_code": "FR-67",
+  
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 296
+      },
+      {
+          "code_request": 63,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 297
+      },
+      {
+          "code_request": 0,
+          "product_code": "P001",
+          "quantity": 1,
+          "unit_price": 10.0,
+          "line_number": 1,
+          "id": 298
+      },
+      {
+          "code_request": 0,
+          "product_code": "P002",
+          "quantity": 2,
+          "unit_price": 20.0,
+          "line_number": 2,
+          "id": 299
+      },
+      {
+          "code_request": 1,
+          "product_code": "P003",
+          "quantity": 3,
+          "unit_price": 30.0,
+          "line_number": 1,
+          "id": 300
+      },
+      {
+          "code_request": 1,
+          "product_code": "P004",
+          "quantity": 4,
+          "unit_price": 40.0,
+          "line_number": 2,
+          "id": 301
+      },
+      {
+          "code_request": 2,
+          "product_code": "P005",
+          "quantity": 5,
+          "unit_price": 50.0,
+          "line_number": 1,
+          "id": 302
+      },
+      {
+          "code_request": 64,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 303
+      },
+      {
+          "code_request": 65,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 304
+      },
+      {
+          "code_request": 66,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 305
+      },
+      {
+          "code_request": 67,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 306
+      },
+      {
+          "code_request": 68,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 307
+      },
+      {
+          "code_request": 111,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 308
+      },
+      {
+          "code_request": 112,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 309
+      },
+      {
+          "code_request": 113,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 310
+      },
+      {
+          "code_request": 114,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 311
+      },
+      {
+          "code_request": 115,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 312
+      },
+      {
+          "code_request": 118,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70.0,
+          "line_number": 1,
+          "id": 313
+      },
+      {
+          "code_request": 119,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 314
+      },
+      {
+          "code_request": 120,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 315
+      },
+      {
+          "code_request": 121,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 316
+      },
+      {
+          "code_request": 122,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 317
+      },
+      {
+          "code_request": 123,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 318
+      },
+      {
+          "code_request": 124,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 319
+      },
+      {
+          "code_request": 125,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 320
+      },
+      {
+          "code_request": 126,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 321
+      },
+      {
+          "code_request": 127,
+          "product_code": "FR-67",
+          "quantity": 10,
+          "unit_price": 70,
+          "line_number": 1,
+          "id": 322
+      }
+  ]
+}

@@ -1,0 +1,220 @@
+{   
+    "payments":[
+    {
+        "code_client": 1,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000001",
+        "date_payment": "2008-11-10",
+        "total": 2000,
+        "id": 1
+    },
+    {
+        "code_client": 1,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000002",
+        "date_payment": "2008-12-10",
+        "total": 2000,
+        "id": 2
+    },
+    {
+        "code_client": 3,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000003",
+        "date_payment": "2009-01-16",
+        "total": 5000,
+        "id": 3
+    },
+    {
+        "code_client": 3,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000004",
+        "date_payment": "2009-02-16",
+        "total": 5000,
+        "id": 4
+    },
+    {
+        "code_client": 3,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000005",
+        "date_payment": "2009-02-19",
+        "total": 926,
+        "id": 5
+    },
+    {
+        "code_client": 4,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000006",
+        "date_payment": "2007-01-08",
+        "total": 20000,
+        "id": 6
+    },
+    {
+        "code_client": 4,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000007",
+        "date_payment": "2007-01-08",
+        "total": 20000,
+        "id": 7
+    },
+    {
+        "code_client": 4,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000008",
+        "date_payment": "2007-01-08",
+        "total": 20000,
+        "id": 8
+    },
+    {
+        "code_client": 4,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000009",
+        "date_payment": "2007-01-08",
+        "total": 20000,
+        "id": 9
+    },
+    {
+        "code_client": 4,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000010",
+        "date_payment": "2007-01-08",
+        "total": 1849,
+        "id": 10
+    },
+    {
+        "code_client": 5,
+        "payment": "Transferencia",
+        "id_transaction": "ak-std-000011",
+        "date_payment": "2006-01-18",
+        "total": 23794,
+        "id": 11
+    },
+    {
+        "code_client": 7,
+        "payment": "Cheque",
+        "id_transaction": "ak-std-000012",
+        "date_payment": "2009-01-13",
+        "total": 2390,
+        "id": 12
+    },
+    {
+        "code_client": 9,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000013",
+        "date_payment": "2009-01-06",
+        "total": 929,
+        "id": 13
+    },
+    {
+        "code_client": 13,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000014",
+        "date_payment": "2008-08-04",
+        "total": 2246,
+        "id": 14
+    },
+    {
+        "code_client": 14,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000015",
+        "date_payment": "2008-07-15",
+        "total": 4160,
+        "id": 15
+    },
+    {
+        "code_client": 15,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000016",
+        "date_payment": "2009-01-15",
+        "total": 2081,
+        "id": 16
+    },
+    {
+        "code_client": 15,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000035",
+        "date_payment": "2009-02-15",
+        "total": 10000,
+        "id": 17
+    },
+    {
+        "code_client": 16,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000017",
+        "date_payment": "2009-02-16",
+        "total": 4399,
+        "id": 18
+    },
+    {
+        "code_client": 19,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000018",
+        "date_payment": "2009-03-06",
+        "total": 232,
+        "id": 19
+    },
+    {
+        "code_client": 23,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000019",
+        "date_payment": "2009-03-26",
+        "total": 272,
+        "id": 20
+    },
+    {
+        "code_client": 26,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000020",
+        "date_payment": "2008-03-18",
+        "total": 18846,
+        "id": 21
+    },
+    {
+        "code_client": 27,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000021",
+        "date_payment": "2009-02-08",
+        "total": 10972,
+        "id": 22
+    },
+    {
+        "code_client": 28,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000022",
+        "date_payment": "2009-01-13",
+        "total": 8489,
+        "id": 23
+    },
+    {
+        "code_client": 30,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000024",
+        "date_payment": "2009-01-16",
+        "total": 7863,
+        "id": 24
+    },
+    {
+        "code_client": 35,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000025",
+        "date_payment": "2007-10-06",
+        "total": 3321,
+        "id": 25
+    },
+    {
+        "code_client": 38,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000026",
+        "date_payment": "2006-05-26",
+        "total": 1171,
+        "id": 26
+    },
+    {
+        "code_client": 20,
+        "payment": "PayPal",
+        "id_transaction": "ak-std-000030",
+        "date_payment": "2008-10-20",
+        "total": 20000,
+        "id": 27
+    }
+]
+}
