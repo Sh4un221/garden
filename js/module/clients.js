@@ -1,9 +1,9 @@
-import{
+import {
     getEmployByCode
-}from "./employees.js"
-import{
-getOfficesByCode
-}from "./offices.js"
+} from "./employees.js"
+import {
+    getOfficesByCode
+} from "./offices.js"
 // 6. Devuelve un listado con el nombre de los todos los clientes españoles.
 export const getAllSpainClients = async () => {
     let res = await fetch("http://localhost:5501/clients?country=Spain")
@@ -25,8 +25,8 @@ export const getAllClientsInMadrid = async () => {
         if (val.code_employee_sales_manager == 11 || val.code_employee_sales_manager == 30) {
             dataUpdate.push({
                 nombre: val.client_name,
-                region:val.region,
-                representante_de_ventas:val.code_employee_sales_manager
+                region: val.region,
+                representante_de_ventas: val.code_employee_sales_manager
 
             })
         }
@@ -37,10 +37,8 @@ export const getAllClientsInMadrid = async () => {
 
 
 // Consultas multitabla (Composición interna)
-
-// 7. Devuelve el nombre de los clientes y el nombre de sus representantes 
-// junto con la ciudad de la oficina a la que pertenece el representante.
-export const getClientsEmploy = async() =>{
+//1. Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas.
+export const getClientsAndEmployeesNames = async () => {
     let res = await fetch("http://localhost:5501/clients");
     let clients = await res.json();
     for (let i = 0; i < clients.length; i++) {
@@ -50,14 +48,62 @@ export const getClientsEmploy = async() =>{
             contact_lastname,
             phone,
             fax,
-            address1:address1Client,
-            address2:address2Client,
+            address1,
+            address2,
             city,
-            region:regionClients,
-            country:countryClients,
-            postal_code:postal_codeClients,
+            region,
+            country,
+            postal_code,
             limit_credit,
-            id:idClients,
+            id,
+            ...clientsUpdate
+        } = clients[i];
+        let [employ] = await getEmployByCode(clientsUpdate.code_employee_sales_manager)
+        let{
+            name,
+            lastname1,
+            lastname2,
+            employee_code,
+            extension,
+            email,
+            code_office,
+            code_boss,
+            position,
+            id:idEmployee,
+            ...employUpdate
+        }=employ
+        let data = { ...clientsUpdate, ...employUpdate };
+        let {
+            code_employee_sales_manager,
+            ...dataUpdate
+        } = data;
+
+        dataUpdate.name_employee = `${employ.name} `
+        dataUpdate.lastnames_employee=`${employ.lastname1} ${employ.lastname2}`
+        clients[i] = dataUpdate
+    }
+    return clients;
+}
+// 7. Devuelve el nombre de los clientes y el nombre de sus representantes 
+// junto con la ciudad de la oficina a la que pertenece el representante.
+export const getClientsEmploy = async () => {
+    let res = await fetch("http://localhost:5501/clients");
+    let clients = await res.json();
+    for (let i = 0; i < clients.length; i++) {
+        let {
+            client_code,
+            contact_name,
+            contact_lastname,
+            phone,
+            fax,
+            address1: address1Client,
+            address2: address2Client,
+            city,
+            region: regionClients,
+            country: countryClients,
+            postal_code: postal_codeClients,
+            limit_credit,
+            id: idClients,
             ...clientsUpdate
         } = clients[i];
 
@@ -67,7 +113,7 @@ export const getClientsEmploy = async() =>{
             email,
             code_boss,
             position,
-            id:idEmploy,
+            id: idEmploy,
             name,
             lastname1,
             lastname2,
@@ -78,23 +124,23 @@ export const getClientsEmploy = async() =>{
         let [office] = await getOfficesByCode(employUpdate.code_office)
 
         let {
-            country:countryOffice,
-            region:regionOffice,
-            postal_code:postal_codeOffice,
+            country: countryOffice,
+            region: regionOffice,
+            postal_code: postal_codeOffice,
             movil,
-            address1:address1Office,
-            address2:address2Office,
-            id:idOffice,
+            address1: address1Office,
+            address2: address2Office,
+            id: idOffice,
             ...officeUpdate
         } = office
 
 
-        let data = {...clientsUpdate, ...employUpdate, ...officeUpdate};
+        let data = { ...clientsUpdate, ...employUpdate, ...officeUpdate };
         let {
             code_employee_sales_manager,
             code_office,
-            ...dataUpdate       
-        }=data;
+            ...dataUpdate
+        } = data;
 
         dataUpdate.name_employee = `${name} ${lastname1} ${lastname2}`
         clients[i] = dataUpdate

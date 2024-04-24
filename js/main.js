@@ -12,7 +12,9 @@ import {
 import {
     getAllSpainClients,
     getAllClientsInMadrid,
-    getClientsEmploy
+    getClientsEmploy,
+    getClientsAndEmployeesNames
+
 } from "./module/clients.js"
 import {
     getRequestDeliveredInJanuary,
@@ -46,5 +48,6 @@ import { log } from "console"
 // console.log(await getPaymentsByYear(2008));
 // console.log(await getProductsWithGammaOrnamentales())
 // console.log(await getAllClientsInMadrid());
-console.log(await getClientsEmploy());
+// console.log(await getClientsEmploy());
+console.log(await getClientsAndEmployeesNames());
 
