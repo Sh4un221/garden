@@ -45,3 +45,10 @@ export const getAllEmployees=async()=>{
     })
     return dataUpdate
 }
+
+export const getEmployByCode=async(code)=>{
+    let res=await fetch(`http://localhost:5502/employees?employee_code=${code}`);
+    let data=await res.json();
+    return data;
+
+}
