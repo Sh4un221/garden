@@ -11,7 +11,7 @@ import {
 
 import {
     getAllSpainClients,
-    // getAll
+    getAll
 } from "./module/clients.js"
 import {
     getRequestDeliveredInJanuary,
@@ -28,7 +28,7 @@ import {
 } from "./module/payments.js"
 
 import{
-    get
+    getProductsWithGammaOrnamentales
 }from "./module/products.js"
 // console.log(await getAllOfficesCodeAndCity());
 // console.log(await getAllOfficesAndPhonesFromSpain());
@@ -42,4 +42,5 @@ import{
 // console.log(await getRejectRequestsByDate(2009));
 // console.log(await getRequestDeliveredByMonth());
 // console.log(await getPaymentsByYear(2008));
-console.log(await get())
+// console.log(await getProductsWithGammaOrnamentales())
+console.log(await getAll());
