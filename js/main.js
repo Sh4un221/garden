@@ -11,7 +11,7 @@ import {
 
 import {
     getAllSpainClients,
-    getAll
+    getAllClientsInMadrid
 } from "./module/clients.js"
 import {
     getRequestDeliveredInJanuary,
@@ -43,4 +43,4 @@ import{
 // console.log(await getRequestDeliveredByMonth());
 // console.log(await getPaymentsByYear(2008));
 // console.log(await getProductsWithGammaOrnamentales())
-console.log(await getAll());
+console.log(await getAllClientsInMadrid());
