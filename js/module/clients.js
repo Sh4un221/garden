@@ -7,6 +7,12 @@ import {
 import {
     getPaymentByClientCode
 } from "./payments.js"
+
+export const getClientsBySalesManager = async (id) => {
+    let res = await fetch(`http://localhost:5501/clients?code_employee_sales_manager=${id}`)
+    let dataClient= await res.json()
+    return dataClient
+}
 // 6. Devuelve un listado con el nombre de los todos los clientes españoles.
 export const getAllSpainClients = async () => {
     let res = await fetch("http://localhost:5501/clients?country=Spain")
@@ -91,6 +97,7 @@ export const getClientsAndEmployeesNames = async () => {
 export const getClientsWhoMadePayment = async () => {
     let res = await fetch("http://localhost:5501/clients");
     let clients = await res.json();
+
     for (let i = 0; i < clients.length; i++) {
         let {
             contact_name,
@@ -107,6 +114,17 @@ export const getClientsWhoMadePayment = async () => {
             id,
             ...clientsUpdate
         } = clients[i];
+        let [payments] = await getPaymentByClientCode(clientsUpdate.client_code)
+        if (payments) {
+            var {
+                payment,
+                id_transaction,
+                date_payment,
+                total,
+                id: idPayments,
+                ...paymentsUpdate
+            } = payments
+        }
         let [employ] = await getEmployByCode(clientsUpdate.code_employee_sales_manager)
         let {
             name,
@@ -121,30 +139,238 @@ export const getClientsWhoMadePayment = async () => {
             id: idEmployee,
             ...employUpdate
         } = employ
-
-        let[payments] = await getPaymentByClientCode(clientsUpdate.client_code)
-        
-        if(payments){
-            let {
-                payment,
-                id_transaction,
-                date_payment,
-                id:idPayment,
-                ...paymentsData
-            } = payments
-            let data = { ...clientsUpdate, ...employUpdate, ...paymentsData };
-            let {
-                code_employee_sales_manager,
-                ...dataUpdate
-            } = data;
-    
+        let data = { ...clientsUpdate, ...employUpdate, ...paymentsUpdate };
+        let {
+            code_employee_sales_manager,
+            client_code,
+            code_client,
+            ...dataUpdate
+        } = data;
+        if (paymentsUpdate.code_client == clientsUpdate.client_code) {
             dataUpdate.name_employee = `${employ.name} `
             dataUpdate.lastnames_employee = `${employ.lastname1} ${employ.lastname2}`
             clients[i] = dataUpdate
         }
-        return clients;
-        } 
-        
+    }
+    clients = clients.filter(client => client.name_employee && client.lastnames_employee);
+    return clients
+
+}
+//3. Muestra el nombre de los clientes que **no** hayan realizado pagos junto con el nombre de sus representantes de ventas.
+export const getClientsWhoNotMadePayment = async () => {
+    let res = await fetch("http://localhost:5501/clients");
+    let clients = await res.json();
+    for (let i = 0; i < clients.length; i++) {
+        let {
+            contact_name,
+            contact_lastname,
+            phone,
+            fax,
+            address1,
+            address2,
+            city,
+            region,
+            country,
+            postal_code,
+            limit_credit,
+            id,
+            ...clientsUpdate
+        } = clients[i];
+        let [payments] = await getPaymentByClientCode(clientsUpdate.client_code)
+        if (payments) {
+            var {
+                payment,
+                id_transaction,
+                date_payment,
+                total,
+                id: idPayments,
+                ...paymentsUpdate
+            } = payments
+        }
+        let [employ] = await getEmployByCode(clientsUpdate.code_employee_sales_manager)
+        let {
+            name,
+            lastname1,
+            lastname2,
+            employee_code,
+            extension,
+            email,
+            code_office,
+            code_boss,
+            position,
+            id: idEmployee,
+            ...employUpdate
+        } = employ
+        let data = { ...clientsUpdate, ...employUpdate, ...paymentsUpdate };
+        let {
+            code_employee_sales_manager,
+            client_code,
+            code_client,
+            ...dataUpdate
+        } = data;
+        if (paymentsUpdate.code_client != clientsUpdate.client_code) {
+            dataUpdate.name_employee = `${employ.name} `
+            dataUpdate.lastnames_employee = `${employ.lastname1} ${employ.lastname2}`
+            clients[i] = dataUpdate
+        }
+    }
+    clients = clients.filter(client => client.name_employee && client.lastnames_employee);
+    return clients
+
+}
+//4.Devuelve el nombre de los clientes que han hecho pagos y el nombre de sus representantes junto con 
+//la ciudad de la oficina a la que pertenece el representante.
+export const getClientsWhoMadePaymentsAndTheyCity = async () => {
+    let res = await fetch("http://localhost:5501/clients");
+    let clients = await res.json();
+
+    for (let i = 0; i < clients.length; i++) {
+        let {
+            contact_name,
+            contact_lastname,
+            phone,
+            fax,
+            address1,
+            address2,
+            city,
+            region,
+            country,
+            postal_code,
+            limit_credit,
+            id,
+            ...clientsUpdate
+        } = clients[i];
+        let [payments] = await getPaymentByClientCode(clientsUpdate.client_code)
+        if (payments) {
+            var {
+                payment,
+                id_transaction,
+                date_payment,
+                total,
+                id: idPayments,
+                ...paymentsUpdate
+            } = payments
+        }
+        let [employ] = await getEmployByCode(clientsUpdate.code_employee_sales_manager)
+        let {
+            name,
+            lastname1,
+            lastname2,
+            employee_code,
+            extension,
+            email,
+            code_boss,
+            position,
+            id: idEmployee,
+            ...employUpdate
+        } = employ
+        let [office] = await getOfficesByCode(employUpdate.code_office)
+
+        let {
+            country: countryOffice,
+            region: regionOffice,
+            postal_code: postal_codeOffice,
+            movil,
+            address1: address1Office,
+            address2: address2Office,
+            id: idOffice,
+            ...officeUpdate
+        } = office
+
+        let data = { ...clientsUpdate, ...employUpdate, ...paymentsUpdate, ...officeUpdate };
+        let {
+            code_employee_sales_manager,
+            client_code,
+            code_client,
+            code_office,
+            ...dataUpdate
+        } = data;
+        if (paymentsUpdate.code_client == clientsUpdate.client_code && officeUpdate.code_office == employUpdate.code_office) {
+            dataUpdate.name_employee = `${employ.name} `
+            dataUpdate.lastnames_employee = `${employ.lastname1} ${employ.lastname2}`
+            clients[i] = dataUpdate
+        }
+    }
+    clients = clients.filter(client => client.name_employee && client.lastnames_employee);
+    return clients
+
+}
+//5.  Devuelve el nombre de los clientes que **no** hayan hecho pagos y 
+//el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece el representante.
+export const getClientsWhoDidntMadePaymentsAndTheyCity = async () => {
+    let res = await fetch("http://localhost:5501/clients");
+    let clients = await res.json();
+
+    for (let i = 0; i < clients.length; i++) {
+        let {
+            contact_name,
+            contact_lastname,
+            phone,
+            fax,
+            address1,
+            address2,
+            city,
+            region,
+            country,
+            postal_code,
+            limit_credit,
+            id,
+            ...clientsUpdate
+        } = clients[i];
+        let [payments] = await getPaymentByClientCode(clientsUpdate.client_code)
+        if (payments) {
+            var {
+                payment,
+                id_transaction,
+                date_payment,
+                total,
+                id: idPayments,
+                ...paymentsUpdate
+            } = payments
+        }
+        let [employ] = await getEmployByCode(clientsUpdate.code_employee_sales_manager)
+        let {
+            name,
+            lastname1,
+            lastname2,
+            employee_code,
+            extension,
+            email,
+            code_boss,
+            position,
+            id: idEmployee,
+            ...employUpdate
+        } = employ
+        let [office] = await getOfficesByCode(employUpdate.code_office)
+
+        let {
+            country: countryOffice,
+            region: regionOffice,
+            postal_code: postal_codeOffice,
+            movil,
+            address1: address1Office,
+            address2: address2Office,
+            id: idOffice,
+            ...officeUpdate
+        } = office
+
+        let data = { ...clientsUpdate, ...employUpdate, ...paymentsUpdate, ...officeUpdate };
+        let {
+            code_employee_sales_manager,
+            client_code,
+            code_client,
+            code_office,
+            ...dataUpdate
+        } = data;
+        if (paymentsUpdate.code_client != clientsUpdate.client_code && officeUpdate.code_office == employUpdate.code_office) {
+            dataUpdate.name_employee = `${employ.name} `
+            dataUpdate.lastnames_employee = `${employ.lastname1} ${employ.lastname2}`
+            clients[i] = dataUpdate
+        }
+    }
+    clients = clients.filter(client => client.name_employee && client.lastnames_employee);
+    return clients
+
 }
 // 7. Devuelve el nombre de los clientes y el nombre de sus representantes 
 // junto con la ciudad de la oficina a la que pertenece el representante.
