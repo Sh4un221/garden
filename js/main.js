@@ -13,7 +13,8 @@ import {
     getAllSpainClients,
     getAllClientsInMadrid,
     getClientsEmploy,
-    getClientsAndEmployeesNames
+    getClientsAndEmployeesNames,
+    getClientsWhoMadePayment
 
 } from "./module/clients.js"
 import {
@@ -22,12 +23,13 @@ import {
     getAllRequestEarlyTwoDays,
     getAllLateRequest,
     getAllStatus,
-    getClientsRequestByYear,
+    getClientsRequestByYear
 } from "./module/requests.js"
 
 import {
     getPaymentsByYear,
-    getAllPaymentStatus
+    getAllPaymentStatus,
+    getPaymentByClientCode
 } from "./module/payments.js"
 
 import{
@@ -49,5 +51,7 @@ import { log } from "console"
 // console.log(await getProductsWithGammaOrnamentales())
 // console.log(await getAllClientsInMadrid());
 // console.log(await getClientsEmploy());
-console.log(await getClientsAndEmployeesNames());
+// console.log(await getClientsAndEmployeesNames());
+console.log(await getClientsWhoMadePayment());
+// console.log(await getPaymentByClientCode(6));
 

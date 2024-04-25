@@ -4,6 +4,9 @@ import {
 import {
     getOfficesByCode
 } from "./offices.js"
+import {
+    getPaymentByClientCode
+} from "./payments.js"
 // 6. Devuelve un listado con el nombre de los todos los clientes españoles.
 export const getAllSpainClients = async () => {
     let res = await fetch("http://localhost:5501/clients?country=Spain")
@@ -59,7 +62,7 @@ export const getClientsAndEmployeesNames = async () => {
             ...clientsUpdate
         } = clients[i];
         let [employ] = await getEmployByCode(clientsUpdate.code_employee_sales_manager)
-        let{
+        let {
             name,
             lastname1,
             lastname2,
@@ -69,9 +72,9 @@ export const getClientsAndEmployeesNames = async () => {
             code_office,
             code_boss,
             position,
-            id:idEmployee,
+            id: idEmployee,
             ...employUpdate
-        }=employ
+        } = employ
         let data = { ...clientsUpdate, ...employUpdate };
         let {
             code_employee_sales_manager,
@@ -79,10 +82,69 @@ export const getClientsAndEmployeesNames = async () => {
         } = data;
 
         dataUpdate.name_employee = `${employ.name} `
-        dataUpdate.lastnames_employee=`${employ.lastname1} ${employ.lastname2}`
+        dataUpdate.lastnames_employee = `${employ.lastname1} ${employ.lastname2}`
         clients[i] = dataUpdate
     }
     return clients;
+}
+//2. Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas.
+export const getClientsWhoMadePayment = async () => {
+    let res = await fetch("http://localhost:5501/clients");
+    let clients = await res.json();
+    for (let i = 0; i < clients.length; i++) {
+        let {
+            contact_name,
+            contact_lastname,
+            phone,
+            fax,
+            address1,
+            address2,
+            city,
+            region,
+            country,
+            postal_code,
+            limit_credit,
+            id,
+            ...clientsUpdate
+        } = clients[i];
+        let [employ] = await getEmployByCode(clientsUpdate.code_employee_sales_manager)
+        let {
+            name,
+            lastname1,
+            lastname2,
+            employee_code,
+            extension,
+            email,
+            code_office,
+            code_boss,
+            position,
+            id: idEmployee,
+            ...employUpdate
+        } = employ
+
+        let[payments] = await getPaymentByClientCode(clientsUpdate.client_code)
+        
+        if(payments){
+            let {
+                payment,
+                id_transaction,
+                date_payment,
+                id:idPayment,
+                ...paymentsData
+            } = payments
+            let data = { ...clientsUpdate, ...employUpdate, ...paymentsData };
+            let {
+                code_employee_sales_manager,
+                ...dataUpdate
+            } = data;
+    
+            dataUpdate.name_employee = `${employ.name} `
+            dataUpdate.lastnames_employee = `${employ.lastname1} ${employ.lastname2}`
+            clients[i] = dataUpdate
+        }
+        return clients;
+        } 
+        
 }
 // 7. Devuelve el nombre de los clientes y el nombre de sus representantes 
 // junto con la ciudad de la oficina a la que pertenece el representante.
