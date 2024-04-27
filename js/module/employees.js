@@ -4,10 +4,17 @@ export const getEmployByCode = async (code) => {
     return dataEmployee;
 
 }
-export const getEmployByBossCode=async(code)=>{
-    let res=await fetch(`http://localhost:5502/employees?code_boss=${code}`)
+export const getEmployByBossCode = async (code) => {
+    let res = await fetch(`http://localhost:5502/employees?code_boss=${code}`)
     let data = await res.json();
     return data
+}
+export const getNameByEmployeeCode = async (code) => {
+    let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`)
+    let data = await res.json()
+    const [dir] = data
+    const { name } = dir
+    return name
 }
 // 3. Devuelve un listado con el nombre, apellidos y email de los empleados cuyo jefe tiene un código de jefe igual a 7.
 export const getAllNameSurnamesAndEmailInCargeOfBossSeven = async () => {
@@ -58,4 +65,53 @@ export const getAllEmployees = async () => {
 }
 //Consultas Multitabla(interno)
 //8.Devuelve un listado con el nombre de los empleados junto con el nombre de sus jefes.
+export const getEmployeesWithBoss = async () => {
+    let res = await fetch(`http://localhost:5502/employees`)
+    let employees = await res.json()
+    let bosses = []
+    for (let i = 0; i < employees.length; i++) {
+        if (employees[i].code_boss !== null) {
+            let existingBoss = bosses.find(boss => boss.boss === employees[i].code_boss);
+            if (existingBoss) {
+                existingBoss.employees.push(employees[i].name);
+            } else {
+                bosses.push({
+                    boss: employees[i].code_boss,
+                    nameBoss: await getNameByEmployeeCode(employees[i].code_boss),
+                    employees: [employees[i].name]
+                });
+            }
+        }
+    }
+    let bossesWithoutCode = bosses.map(boss => ({ nameBoss: boss.nameBoss, employees: boss.employees }));
+    return bossesWithoutCode;
+}
+//9. Devuelve un listado que muestre el nombre de cada empleados, el nombre de su jefe y el nombre del jefe de sus jefe.
+export const getEmployeesWithBosses = async () => {
+    let res = await fetch(`http://localhost:5502/employees`)
+    let employees = await res.json()
+    let bosses = []
+    for (let i = 0; i < employees.length; i++) {
+        let [employeeData] = getEmployByCode(i);
+        if (employeeData) {
+            let { name } = employeeData
+        }
+        if (employees[i].code_boss !== null) {
+            let existingBoss = bosses.find(boss => boss.boss === employees[i].code_boss);
+            if (existingBoss) {
+                existingBoss.employees.push(employees[i].name);
+            } else {
+                bosses.push({
+                    boss: employees[i].code_boss,
+                    nameBoss: await getNameByEmployeeCode(employees[i].code_boss),
+                    employees: [employees[i].name]
+                });
+            }
+        }
+    }
+    let bossesWithoutCode = bosses.map(boss => ({ nameBoss: boss.nameBoss, employees: boss.employees }));
+    return bossesWithoutCode;
+}
+
+
 

@@ -430,6 +430,8 @@ export const getOfficeAddressOfClientsFromFuenlabrada = async () => {
         } = data;
 
         dataUpdate.name_employee = `${name} ${lastname1} ${lastname2}`
+        dataUpdate.address1=`${address1Office}`
+        dataUpdate.address2=`${address2Office}`
         clients[i] = dataUpdate
     }
     return clients;

@@ -8,7 +8,9 @@ import {
     getAllNameSurnamesAndEmailInCargeOfBossSeven,
     getBossesFullnameAndEmail,
     getAllEmployees,
-    getAllEmployeesWithTheBoss
+    getEmployeesWithBoss,
+    getEmployeesWithBosses
+
 } from "./module/employees.js"
 
 import {
@@ -64,4 +66,5 @@ import { log } from "console"
 //console.log(await getClientsWhoMadePaymentsAndTheyCity());
 //console.log(await getClientsWhoDidntMadePaymentsAndTheyCity());
 // console.log(await getOfficeAddressOfClientsFromFuenlabrada());
-console.log(await getAllEmployeesWithTheBoss());
+// console.log(await getEmployeesWithBoss());
+console.log(await getEmployeesWithBosses());

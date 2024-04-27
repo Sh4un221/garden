@@ -1,0 +1,219 @@
+@import url(variables.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto-Regular";
+}
+
+body {
+    background: var(--color3);
+}
+
+.main {
+    /* background: red; */
+}
+
+.main__banner {
+    height: 245px;
+    background-image: url(../storage/img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner__opcion {
+    /* background: red; */
+    padding-top: 40px;
+    display: flex;
+    margin: 0 var(--layout-box-x);
+    justify-content: space-between;
+}
+.banner__opcion a{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background: orange;
+    color: var(--color2);
+    box-shadow: 0px 0px 10px var(--color7);
+}
+.banner__opcion a:first-child{
+    border-radius: 10px;
+    background: var(--color8);
+    text-decoration: none;
+    gap: 10px;
+    padding: 5px 10px;
+}
+.banner__opcion a:last-child{
+    border-radius: 100%;
+    background: var(--color8);
+    padding: 8px;
+}
+.main__report {
+    /* background: blue; */
+}
+
+.report__user {
+    /* background: green; */
+    margin-left: var(--layout-box-x);
+    margin-right: var(--layout-box-x);
+    margin-top: var(--layout-box-y);
+}
+
+.report__user h1 {
+    font-family: "Roboto-Medium";
+    color: var(--color5);
+    font-size: 1.8em;
+    padding-bottom: 8px;
+}
+
+.report__user small {
+    font-size: .8em;
+    color: var(--color6);
+}
+
+.report__menu {
+    height: 55px;
+    margin-right: var(--layout-box-x);
+    margin-left: var(--layout-box-x);
+    margin-top: var(--layout-box-y);
+    background: var(--color7);
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.report__menu button {
+    min-width: 30%;
+    height: 45px;
+    text-transform: uppercase;
+    border: none;
+    background: transparent;
+    color: var(--color2);
+    font-family: "Roboto-Bold";
+    margin: 0 5px;
+}
+.report__active{
+    background: var(--color8) !important;
+    color: var(--color5) !important;
+    border-radius: 10px !important;
+    margin: 0 5px !important;
+}
+.report__menu button:hover {
+    background: var(--color8);
+    color: var(--color5);
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+.report__details {
+    /* background: violet; */
+    margin-top: var(--layout-box-y);
+    height: 290px;
+    overflow-y: scroll;
+}
+.report__details details{
+    margin-left: var(--layout-box-x);
+    margin-right: var(--layout-box-x);
+    margin-bottom: var(--layout-box-y);
+}
+.details__description{
+    /* background: red;  */
+    /* width: 80px; */
+}
+.details__container{
+    width: 65%;
+    height: 50px;
+    white-space: nowrap; 
+    overflow-x: scroll; 
+    display: flex;
+    /* background: red; */
+    color: var(--color2);
+    align-items: center;
+}
+summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px var(--color7);
+}
+
+summary::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url('../storage/img/arrow.svg') no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
+details[open]>summary::after {
+    transform: rotate(180deg);
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+summary {
+    color: var(--color5);
+    border-radius: 5px;
+    background: var(--color8);
+}
+details[open] summary {
+    border-radius: 10px;
+}
+details {
+    /* background: red; */
+    border-radius: 5px;
+}
+.report__container{
+    height: 220px;
+    overflow-y: scroll;
+    margin-top: 10px;
+}
+.report__card{
+    /* background: red; */
+    margin: 10px 0px 0px
+}
+.card__title{
+    background: var(--color2);
+    color: var(--color8);
+    font-family: "Roboto-Bold";
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.card__body{
+    background: var(--color8);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 15px 10px;
+}
+.body__marck{
+    border: 1px solid var(--color6);
+    padding: 10px;
+}
+.card__body b{
+    color: var(--color5);
+}
+.card__body p{
+    margin: 10px 0;
+    color: var(--color6);
+}
+.card__footer{
+    background: var(--color2);
+    color: var(--color8);
+    font-family: "Roboto-Bold";
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}

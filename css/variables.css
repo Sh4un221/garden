@@ -1,7 +1,27 @@
 :root{
-    --layout-box-x: 5px ;
+    --color1: #06492C;
+    --color2: #0C9359;
+    --color3: #37fba62b;
+    --color5: #111111;
+    --color6: #c0c0c0;
+    --color7:#0c93595c;
+    --color8: #fff;
+    --layout-box-x: 10px;
+    --layout-box-y: 15px;
 }
 @font-face {
     font-family: "Roboto-Regular";
     src: url(../storage/font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../storage/font/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../storage/font/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../storage/font/Roboto-Medium.ttf);
 }
