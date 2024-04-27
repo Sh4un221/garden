@@ -1,6 +1,5 @@
 import {
-    getEmployByCode,
-    getEmployByOfficeCode,
+
 } from "./employees.js";
 import{
     getClientsBySalesManager
@@ -37,39 +36,4 @@ export const getOfficesByCode = async (code) => {
     let dataOffice = await res.json();
     return dataOffice
 }
-//Consultas Multitabla
-//6.Lista la dirección de las oficinas que tengan clientes en `Fuenlabrada`.
-export const getOfficesAdressWithClientsFromFuenlabrada = async () => {
-    let res = await fetch("http://localhost:5504/offices")
-    let offices = await res.json()
-    for (let i = 0; i < offices.length; i++) {
-        let {
-            city,
-            country,
-            region,
-            postal_code,
-            movil,
-            id,
-            ...officesUpdate
-        } = offices[i]
-        let [employee] = await getEmployByOfficeCode(officesUpdate.code_office)
-        let{
-            name,
-            lastname1,
-            lastname2,
-            extension,
-            email,
-            code_boss,
-            position,
-            id:idEmployee,
-            ...employeeUpdate
-        }=employee
-        let [client]=await getEmployByCode()
-   
-        // let{
-        //     client_code,
-        //     ...clientUpdate
-        // }=client
-    }
 
-}

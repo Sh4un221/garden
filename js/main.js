@@ -1,13 +1,14 @@
 import {
     getAllOfficesCodeAndCity,
     getAllOfficesAndPhonesFromSpain,
-    getOfficesAdressWithClientsFromFuenlabrada,
+    
 } from "./module/offices.js"
 
 import {
     getAllNameSurnamesAndEmailInCargeOfBossSeven,
     getBossesFullnameAndEmail,
-    getAllEmployees
+    getAllEmployees,
+    getAllEmployeesWithTheBoss
 } from "./module/employees.js"
 
 import {
@@ -18,7 +19,8 @@ import {
     getClientsWhoMadePayment,
     getClientsWhoNotMadePayment,
     getClientsWhoMadePaymentsAndTheyCity,
-    getClientsWhoDidntMadePaymentsAndTheyCity
+    getClientsWhoDidntMadePaymentsAndTheyCity,
+    getOfficeAddressOfClientsFromFuenlabrada
 
 } from "./module/clients.js"
 import {
@@ -61,4 +63,5 @@ import { log } from "console"
 // console.log(await getPaymentByClientCode(6));
 //console.log(await getClientsWhoMadePaymentsAndTheyCity());
 //console.log(await getClientsWhoDidntMadePaymentsAndTheyCity());
-console.log(await getOfficesAdressWithClientsFromFuenlabrada());
+// console.log(await getOfficeAddressOfClientsFromFuenlabrada());
+console.log(await getAllEmployeesWithTheBoss());
