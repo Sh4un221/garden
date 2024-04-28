@@ -19,6 +19,11 @@ export const getNameByClientCode = async (code) => {
     let { client_name } = dir
     return client_name
 }
+export const getClientByCode = async (code) => {
+    let res = await fetch(`http://localhost:5501/clients?client_code=${code}`)
+    let dataClient = await res.json()
+    return dataClient
+}
 // 6. Devuelve un listado con el nombre de los todos los clientes españoles.
 export const getAllSpainClients = async () => {
     let res = await fetch("http://localhost:5501/clients?country=Spain")
@@ -530,7 +535,7 @@ export const clientsWhoReceivedTheirRequestLate = async () => {
     data = lateRequest.filter((value, index, self) =>
         self.findIndex(item => item.client_code === value.client_code) === index
     );
-    
+
 
     console.log(data);
 }

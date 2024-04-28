@@ -1,8 +1,13 @@
-export const getRequestByCodeClient=async(code)=>{
-    let res= await fetch(`http://localhost:5508/requests?code_client=${code}`)
-    let requests=res.json()
-    let[dir]=requests
+export const getRequestByCodeClient = async (code) => {
+    let res = await fetch(`http://localhost:5508/requests?code_client=${code}`)
+    let requests = res.json()
+    let [dir] = requests
     return dir
+}
+export const getRequestByDetails = async (code) => {
+    let res = await fetch(`http://localhost:5508/requests?code_request=${code}`)
+    let data = await res.json();
+    return data
 }
 // 7. Devuelve un listado con los distintos estados por los que puede pasar un pedido.
 export const getAllStatus = async () => {
@@ -81,7 +86,7 @@ export const getRejectRequestsByYear = async (year) => {
                 Codigo_del_cliente: request.code_client,
                 Fecha_de_esperada: request.date_wait,
                 Fecha_de_entrega: request.date_delivery,
-                Estado:request.status
+                Estado: request.status
             })
         }
     })
@@ -100,7 +105,7 @@ export const getRequestDeliveredInJanuary = async () => {
                 Codigo_del_cliente: request.code_client,
                 Fecha_de_esperada: request.date_wait,
                 Fecha_de_entrega: request.date_delivery,
-                Estado:request.status
+                Estado: request.status
             })
         }
     })

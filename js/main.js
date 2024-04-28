@@ -1,7 +1,7 @@
 import {
     getAllOfficesCodeAndCity,
     getAllOfficesAndPhonesFromSpain,
-    
+
 } from "./module/offices.js"
 
 import {
@@ -41,10 +41,14 @@ import {
     getPaymentByClientCode
 } from "./module/payments.js"
 
-import{
+import {
     getProductsWithGammaOrnamentales
-}from "./module/products.js"
+} from "./module/products.js"
+import {
+    lisOfProductRangesPurchasedByClient
+} from "./module/request_details.js"
 import { log } from "console"
+
 // console.log(await getAllOfficesCodeAndCity());
 // console.log(await getAllOfficesAndPhonesFromSpain());
 // console.log(await getAllNameSurnamesAndEmail());
@@ -69,4 +73,5 @@ import { log } from "console"
 // console.log(await getOfficeAddressOfClientsFromFuenlabrada());
 // console.log(await getEmployeesWithBoss());
 // console.log(await getEmployeesWithBosses());
-console.log(await clientsWhoReceivedTheirRequestLate());
+// console.log(await clientsWhoReceivedTheirRequestLate());
+console.log(await lisOfProductRangesPurchasedByClient());
