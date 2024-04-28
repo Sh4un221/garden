@@ -3,6 +3,12 @@ export const getEmployByCode = async (code) => {
     let dataEmployee = await res.json();
     return dataEmployee
 }
+export const getEmployByCode2 = async (code) => {
+    let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
+    let dataEmployee = await res.json();
+    let[dir]=dataEmployee
+    return dir
+}
 export const getEmployByBossCode = async (code) => {
     let res = await fetch(`http://localhost:5502/employees?code_boss=${code}`)
     let data = await res.json();
@@ -102,7 +108,7 @@ export const getEmployeesWithBosses = async () => {
             ...employeeData
         } = employees[i]
         if (!(employeeData.code_boss == null)) {
-            let dataBoss = await getEmployByCode(employeeData.code_boss);
+            let dataBoss = await getEmployByCode2(employeeData.code_boss);
             if (dataBoss.code_boss) {
                 jefeDelJefe = await getNameByEmployeeCode(dataBoss.code_boss)
             }

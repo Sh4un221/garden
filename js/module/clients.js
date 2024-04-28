@@ -537,5 +537,5 @@ export const clientsWhoReceivedTheirRequestLate = async () => {
     );
 
 
-    console.log(data);
+    return data;
 }

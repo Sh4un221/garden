@@ -74,4 +74,4 @@ import { log } from "console"
 // console.log(await getEmployeesWithBoss());
 // console.log(await getEmployeesWithBosses());
 // console.log(await clientsWhoReceivedTheirRequestLate());
-// console.log(await lisOfProductRangesPurchasedByClient());
+console.log(await lisOfProductRangesPurchasedByClient());
