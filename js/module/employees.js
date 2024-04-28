@@ -1,8 +1,7 @@
 export const getEmployByCode = async (code) => {
     let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
     let dataEmployee = await res.json();
-    let [data] = dataEmployee
-    return data
+    return dataEmployee
 }
 export const getEmployByBossCode = async (code) => {
     let res = await fetch(`http://localhost:5502/employees?code_boss=${code}`)

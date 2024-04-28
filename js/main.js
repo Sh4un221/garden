@@ -65,7 +65,7 @@ import { log } from "console"
 // console.log(await getAllClientsInMadrid());
 // console.log(await getClientsEmploy());
 // console.log(await getClientsAndEmployeesNames());
-//console.log(await getClientsWhoMadePayment());
+// console.log(await getClientsWhoMadePayment());
 //console.log(await getClientsWhoNotMadePayment());
 // console.log(await getPaymentByClientCode(6));
 //console.log(await getClientsWhoMadePaymentsAndTheyCity());
@@ -74,4 +74,4 @@ import { log } from "console"
 // console.log(await getEmployeesWithBoss());
 // console.log(await getEmployeesWithBosses());
 // console.log(await clientsWhoReceivedTheirRequestLate());
-console.log(await lisOfProductRangesPurchasedByClient());
+// console.log(await lisOfProductRangesPurchasedByClient());
