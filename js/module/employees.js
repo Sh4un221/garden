@@ -1,8 +1,8 @@
 export const getEmployByCode = async (code) => {
     let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
     let dataEmployee = await res.json();
-    return dataEmployee;
-
+    let [data] = dataEmployee
+    return data
 }
 export const getEmployByBossCode = async (code) => {
     let res = await fetch(`http://localhost:5502/employees?code_boss=${code}`)
@@ -91,26 +91,30 @@ export const getEmployeesWithBosses = async () => {
     let res = await fetch(`http://localhost:5502/employees`)
     let employees = await res.json()
     let bosses = []
+
     for (let i = 0; i < employees.length; i++) {
-        let [employeeData] = getEmployByCode(i);
-        if (employeeData) {
-            let { name } = employeeData
-        }
-        if (employees[i].code_boss !== null) {
-            let existingBoss = bosses.find(boss => boss.boss === employees[i].code_boss);
-            if (existingBoss) {
-                existingBoss.employees.push(employees[i].name);
-            } else {
-                bosses.push({
-                    boss: employees[i].code_boss,
-                    nameBoss: await getNameByEmployeeCode(employees[i].code_boss),
-                    employees: [employees[i].name]
-                });
+        let jefeDelJefe = 'No tiene'
+        let {
+            extension,
+            email,
+            code_office,
+            position,
+            id,
+            ...employeeData
+        } = employees[i]
+        if (!(employeeData.code_boss == null)) {
+            let dataBoss = await getEmployByCode(employeeData.code_boss);
+            if (dataBoss.code_boss) {
+                jefeDelJefe = await getNameByEmployeeCode(dataBoss.code_boss)
             }
+            bosses.push({
+                NombreDelTrabajador: employeeData.name,
+                NombreDelJefe: await getNameByEmployeeCode(employeeData.code_boss),
+                jefeDelJefe
+            })
         }
     }
-    let bossesWithoutCode = bosses.map(boss => ({ nameBoss: boss.nameBoss, employees: boss.employees }));
-    return bossesWithoutCode;
+    return bosses
 }
 
 

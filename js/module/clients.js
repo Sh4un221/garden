@@ -7,11 +7,17 @@ import {
 import {
     getPaymentByClientCode
 } from "./payments.js"
+import {
+    getRequestByCodeClient,
+    getAllLateRequest
+} from "./requests.js"
 
-export const getClientsBySalesManager = async (id) => {
-    let res = await fetch(`http://localhost:5501/clients?code_employee_sales_manager=${id}`)
+export const getNameByClientCode = async (code) => {
+    let res = await fetch(`http://localhost:5501/clients?client_code=${code}`)
     let dataClient = await res.json()
-    return dataClient
+    let [dir] = dataClient
+    let { client_name } = dir
+    return client_name
 }
 // 6. Devuelve un listado con el nombre de los todos los clientes españoles.
 export const getAllSpainClients = async () => {
@@ -430,8 +436,8 @@ export const getOfficeAddressOfClientsFromFuenlabrada = async () => {
         } = data;
 
         dataUpdate.name_employee = `${name} ${lastname1} ${lastname2}`
-        dataUpdate.address1=`${address1Office}`
-        dataUpdate.address2=`${address2Office}`
+        dataUpdate.address1 = `${address1Office}`
+        dataUpdate.address2 = `${address2Office}`
         clients[i] = dataUpdate
     }
     return clients;
@@ -499,4 +505,32 @@ export const getClientsEmploy = async () => {
     }
     return clients;
 }
+// 10. Devuelve el nombre de los clientes a los que no se les ha entregado a tiempo un pedido.
+export const clientsWhoReceivedTheirRequestLate = async () => {
+    let res = await fetch("http://localhost:5501/clients");
+    let clients = await res.json();
+    let codes = await getAllLateRequest()
+    let lateRequest = []
+    let data = []
 
+    for (let j = 0; j < codes.length; j++) {
+        let {
+            Codigo_del_pedido,
+            Fecha_de_esperada,
+            Fecha_de_entrega,
+            ...requestData
+        } = codes[j]
+        let { Codigo_del_cliente } = codes[j]
+        lateRequest.push({
+            client_code: Codigo_del_cliente,
+            client_name: await getNameByClientCode(Codigo_del_cliente)
+        });
+    }
+
+    data = lateRequest.filter((value, index, self) =>
+        self.findIndex(item => item.client_code === value.client_code) === index
+    );
+    
+
+    console.log(data);
+}

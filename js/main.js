@@ -22,7 +22,8 @@ import {
     getClientsWhoNotMadePayment,
     getClientsWhoMadePaymentsAndTheyCity,
     getClientsWhoDidntMadePaymentsAndTheyCity,
-    getOfficeAddressOfClientsFromFuenlabrada
+    getOfficeAddressOfClientsFromFuenlabrada,
+    clientsWhoReceivedTheirRequestLate
 
 } from "./module/clients.js"
 import {
@@ -67,4 +68,5 @@ import { log } from "console"
 //console.log(await getClientsWhoDidntMadePaymentsAndTheyCity());
 // console.log(await getOfficeAddressOfClientsFromFuenlabrada());
 // console.log(await getEmployeesWithBoss());
-console.log(await getEmployeesWithBosses());
+// console.log(await getEmployeesWithBosses());
+console.log(await clientsWhoReceivedTheirRequestLate());

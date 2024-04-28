@@ -1,9 +1,7 @@
 import {
 
 } from "./employees.js";
-import{
-    getClientsBySalesManager
-}from"./clients.js"
+
 //1. Devuelve un listado con el còdigo de oficina y la ciudad donde hay oficinas
 export const getAllOfficesCodeAndCity = async () => {
     let res = await fetch("http://localhost:5504/offices")
