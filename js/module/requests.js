@@ -26,7 +26,7 @@ export const getAllStatus = async () => {
     return dataUpdate;
 }
 // 8. Devuelve un listado con el código de cliente de aquellos clientes que realizaron algún pago en 2008. Tenga en cuenta que deberá eliminar aquellos códigos de cliente que aparezcan repetidos. Resuelva la consulta:
-export const getClientsRequestByYear = async (year) => {
+export const getClientsRequestByYear = async (year=2008) => {
     let res = await fetch("http://localhost:5508/requests")
     let data = await res.json();
     let dataUpdate = [];
@@ -48,7 +48,7 @@ export const getAllLateRequest = async () => {
             dataUpdate.push({
                 Codigo_del_pedido: request.code_request,
                 Codigo_del_cliente: request.code_client,
-                Fecha_de_esperada: request.date_wait,
+                Fecha_esperada: request.date_wait,
                 Fecha_de_entrega: request.date_delivery,
             })
         }
@@ -74,8 +74,8 @@ export const getAllRequestEarlyTwoDays = async () => {
     })
     return dataUpdate;
 }
-// Devuelve un listado de todos los pedidos que fueron **rechazados** en `2009`.
-export const getRejectRequestsByYear = async (year) => {
+// 11. Devuelve un listado de todos los pedidos que fueron **rechazados** en `2009`.
+export const getRejectRequestsByYear = async (year=2009) => {
     let res = await fetch("http://localhost:5508/requests?status=Rechazado")
     let data = await res.json();
     let dataUpdate = [];
@@ -93,7 +93,7 @@ export const getRejectRequestsByYear = async (year) => {
     dataUpdate = [... new Set(dataUpdate)]
     return dataUpdate.sort((a, b) => a - b)
 }
-// Devuelve un listado de todos los pedidos que han sido **entregados** en el mes de enero de cualquier año.
+// 12. Devuelve un listado de todos los pedidos que han sido **entregados** en el mes de enero de cualquier año.
 export const getRequestDeliveredInJanuary = async () => {
     let res = await fetch("http://localhost:5508/requests?status=Entregado")
     let data = await res.json();

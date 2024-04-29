@@ -1,4 +1,4 @@
-// Devuelve un listado con todos los pagos que se realizaron en el año `2008` mediante `Paypal`. Ordene el resultado de mayor a menor.
+// 13. Devuelve un listado con todos los pagos que se realizaron en el año `2008` mediante `Paypal`. Ordene el resultado de mayor a menor.
 export const getPaymentsByYear = async (year) => {
     let res = await fetch("http://localhost:5505/payments?payment=PayPal")
     let data = await res.json();
@@ -15,7 +15,7 @@ export const getPaymentsByYear = async (year) => {
     dataUpdate = [... new Set(dataUpdate)]
     return dataUpdate.sort((a, b) => b - a)
 }
-// Devuelve un listado con todas las formas de pago que aparecen en la tabla `pago`. Tenga en cuenta que no deben aparecer formas de pago repetidas.
+// 14. Devuelve un listado con todas las formas de pago que aparecen en la tabla `pago`. Tenga en cuenta que no deben aparecer formas de pago repetidas.
 export const getAllPaymentStatus = async () => {
     let res = await fetch("http://localhost:5505/payments")
     let data = await res.json();
