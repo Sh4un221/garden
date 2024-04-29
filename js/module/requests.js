@@ -66,7 +66,7 @@ export const getAllRequestEarlyTwoDays = async () => {
                 dataUpdate.push({
                     Codigo_del_pedido: request.code_request,
                     Codigo_del_cliente: request.code_client,
-                    Fecha_de_esperada: request.date_wait,
+                    Fecha_esperada: request.date_wait,
                     Fecha_de_entrega: request.date_delivery,
                 })
             }
@@ -84,7 +84,7 @@ export const getRejectRequestsByYear = async (year=2009) => {
             dataUpdate.push({
                 Codigo_del_pedido: request.code_request,
                 Codigo_del_cliente: request.code_client,
-                Fecha_de_esperada: request.date_wait,
+                Fecha_esperada: request.date_wait,
                 Fecha_de_entrega: request.date_delivery,
                 Estado: request.status
             })
@@ -103,7 +103,7 @@ export const getRequestDeliveredInJanuary = async () => {
             dataUpdate.push({
                 Codigo_del_pedido: request.code_request,
                 Codigo_del_cliente: request.code_client,
-                Fecha_de_esperada: request.date_wait,
+                Fecha_esperada: request.date_wait,
                 Fecha_de_entrega: request.date_delivery,
                 Estado: request.status
             })

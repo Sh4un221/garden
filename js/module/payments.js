@@ -1,5 +1,5 @@
 // 13. Devuelve un listado con todos los pagos que se realizaron en el año `2008` mediante `Paypal`. Ordene el resultado de mayor a menor.
-export const getPaymentsByYear = async (year) => {
+export const getPaymentsByYear = async (year = 2008) => {
     let res = await fetch("http://localhost:5505/payments?payment=PayPal")
     let data = await res.json();
     let dataUpdate = [];
@@ -29,9 +29,9 @@ export const getAllPaymentStatus = async () => {
     return dataUpdate.sort((a, b) => a - b)
 }
 
-export const getPaymentByClientCode=async(clientCode)=>{
-    let res=await fetch(`http://localhost:5505/payments?code_client=${clientCode}`);
-    let data=await res.json();
+export const getPaymentByClientCode = async (clientCode) => {
+    let res = await fetch(`http://localhost:5505/payments?code_client=${clientCode}`);
+    let data = await res.json();
     return data;
 
 }

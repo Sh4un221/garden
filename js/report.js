@@ -9,6 +9,7 @@ import {
     getClientsWhoDidntMadePaymentsAndTheyCity,
     clientsWhoReceivedTheirRequestLate,
     getAllSpainClients,
+    getAllClientsInMadrid
 } from "./module/clients.js";
 import {
     getEmployeesWithBoss,
@@ -29,7 +30,17 @@ import {
     getAllStatus,
     getClientsRequestByYear,
     getAllLateRequest,
+    getAllRequestEarlyTwoDays,
+    getRejectRequestsByYear,
+    getRequestDeliveredInJanuary
 } from "./module/requests.js"
+import {
+    getPaymentsByYear,
+    getAllPaymentStatus
+} from "./module/payments.js"
+import {
+    getProductsWithGammaOrnamentales
+} from "./module/products.js"
 const queryAboutOneTable1 = document.querySelector("#queryAboutOneTable1");
 queryAboutOneTable1.addEventListener("click", async (e) => {
     let [, report__container] = queryAboutOneTable1.children
@@ -263,6 +274,200 @@ queryAboutOneTable9.addEventListener("click", async (e) => {
                         <p><b>Codigo del cliente: </b>${val.Codigo_del_cliente}</p>
                         <p><b>Fecha esperada: </b>${val.Fecha_esperada}</p>
                         <p><b>Fecha de entrega: </b>${val.Fecha_de_entrega}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
+const queryAboutOneTable10 = document.querySelector("#queryAboutOneTable10");
+queryAboutOneTable10.addEventListener("click", async (e) => {
+    let [, report__container] = queryAboutOneTable10.children
+    if (!report__container.innerHTML) {
+        let data = await getAllRequestEarlyTwoDays();
+        let plantilla = "";
+        console.log(data);
+        var i = 1
+        data.forEach(val => {
+            plantilla += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Pedido ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Codigo del pedido: </b>${val.Codigo_del_pedido}</p>
+                        <p><b>Codigo del cliente: </b>${val.Codigo_del_cliente}</p>
+                        <p><b>Fecha esperada: </b>${val.Fecha_esperada}</p>
+                        <p><b>Fecha de entrega: </b>${val.Fecha_de_entrega}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
+const queryAboutOneTable11 = document.querySelector("#queryAboutOneTable11");
+queryAboutOneTable11.addEventListener("click", async (e) => {
+    let [, report__container] = queryAboutOneTable11.children
+    if (!report__container.innerHTML) {
+        let data = await getRejectRequestsByYear();
+        let plantilla = "";
+        console.log(data);
+        var i = 1
+        data.forEach(val => {
+            plantilla += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Pedido ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Codigo del pedido: </b>${val.Codigo_del_pedido}</p>
+                        <p><b>Codigo del cliente: </b>${val.Codigo_del_cliente}</p>
+                        <p><b>Fecha esperada: </b>${val.Fecha_esperada}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
+const queryAboutOneTable12 = document.querySelector("#queryAboutOneTable12");
+queryAboutOneTable12.addEventListener("click", async (e) => {
+    let [, report__container] = queryAboutOneTable12.children
+    if (!report__container.innerHTML) {
+        let data = await getRequestDeliveredInJanuary();
+        let plantilla = "";
+        console.log(data);
+        var i = 1
+        data.forEach(val => {
+            plantilla += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Pedido ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Codigo del pedido: </b>${val.Codigo_del_pedido}</p>
+                        <p><b>Codigo del cliente: </b>${val.Codigo_del_cliente}</p>
+                        <p><b>Fecha de entrega: </b>${val.Fecha_de_entrega}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
+const queryAboutOneTable13 = document.querySelector("#queryAboutOneTable13");
+queryAboutOneTable13.addEventListener("click", async (e) => {
+    let [, report__container] = queryAboutOneTable13.children
+    if (!report__container.innerHTML) {
+        let data = await getPaymentsByYear();
+        let plantilla = "";
+        console.log(data);
+        var i = 1
+        data.forEach(val => {
+            plantilla += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Pago  ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Codigo del cliente: </b>${val.code_client}</p>
+                        <p><b>Medio de pago: </b>${val.payment}</p>
+                        <p><b>Total: </b>${val.total}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
+const queryAboutOneTable14 = document.querySelector("#queryAboutOneTable14");
+queryAboutOneTable14.addEventListener("click", async (e) => {
+    let [, report__container] = queryAboutOneTable14.children
+    if (!report__container.innerHTML) {
+        let data = await getAllPaymentStatus();
+        let plantilla = "";
+        console.log(data);
+        var i = 1
+        data.forEach(val => {
+            plantilla += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Pago  ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Medio de pago: </b>${val}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
+const queryAboutOneTable15 = document.querySelector("#queryAboutOneTable15");
+queryAboutOneTable15.addEventListener("click", async (e) => {
+    let [, report__container] = queryAboutOneTable15.children
+    if (!report__container.innerHTML) {
+        let data = await getProductsWithGammaOrnamentales();
+        let plantilla = "";
+        console.log(data);
+        var i = 1
+        data.forEach(val => {
+            plantilla += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Producto ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Precio de venta: </b>${val.price}</p>
+                        <p><b>Stock: </b>${val.stock}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
+const queryAboutOneTable16 = document.querySelector("#queryAboutOneTable16");
+queryAboutOneTable16.addEventListener("click", async (e) => {
+    let [, report__container] = queryAboutOneTable16.children
+    if (!report__container.innerHTML) {
+        let data = await getAllClientsInMadrid();
+        let plantilla = "";
+        console.log(data);
+        var i = 1
+        data.forEach(val => {
+            plantilla += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Cliente ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Nombre: </b>${val.nombre}</p>
+                        <p><b>Region: </b>${val.region}</p>
+                        <p><b>Representate de ventas: </b>${val.representante_de_ventas}</p>
                     </div>
                 </div>
             </div>

@@ -11,11 +11,11 @@ export const getProductsWithGammaOrnamentales = async () => {
     data.forEach(request => {
         if (request.stock > 100)
             dataUpdate.push({
-                Nombre: request.name,
-                Codigo: request.code_product,
-                Precio: request.price_sale,
-                Stock: request.stock
+                name: request.name,
+                code: request.code_product,
+                price: request.price_sale,
+                stock: request.stock
             })
     })
-    return dataUpdate.sort((a, b) => a - b)
+    return dataUpdate.sort((a, b) => b.price - a.price)
 }
