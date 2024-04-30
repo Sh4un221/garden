@@ -539,3 +539,24 @@ export const clientsWhoReceivedTheirRequestLate = async () => {
 
     return data;
 }
+//Multitabla
+// Composicion externa
+// 1. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pago.
+export const getClientsWithoutPayments = async () => {
+    try {
+        const res = await fetch(`http://localhost:5501/clients`);
+        const clients = await res.json();
+        let data = [];
+        for (let client of clients) {
+            const payment = await getPaymentByClientCode(client.client_code);
+            if (!payment.length) {
+                data.push(client);
+            }
+        }
+
+        return data;
+    } catch (error) {
+        console.error("Error al obtener clientes sin pagos:", error);
+        throw error;
+    }
+}
