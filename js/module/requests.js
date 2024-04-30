@@ -1,8 +1,7 @@
 export const getRequestByCodeClient = async (code) => {
     let res = await fetch(`http://localhost:5508/requests?code_client=${code}`)
     let requests = res.json()
-    let [dir] = requests
-    return dir
+    return requests
 }
 export const getRequestByDetails = async (code) => {
     let res = await fetch(`http://localhost:5508/requests?code_request=${code}`)

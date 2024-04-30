@@ -543,20 +543,49 @@ export const clientsWhoReceivedTheirRequestLate = async () => {
 // Composicion externa
 // 1. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pago.
 export const getClientsWithoutPayments = async () => {
-    try {
-        const res = await fetch(`http://localhost:5501/clients`);
-        const clients = await res.json();
-        let data = [];
-        for (let client of clients) {
-            const payment = await getPaymentByClientCode(client.client_code);
-            if (!payment.length) {
-                data.push(client);
-            }
-        }
+    const res = await fetch(`http://localhost:5501/clients`);
+    const clients = await res.json();
+    const data = [];
 
-        return data;
-    } catch (error) {
-        console.error("Error al obtener clientes sin pagos:", error);
-        throw error;
+    for (const client of clients) {
+        const payment = await getPaymentByClientCode(client.client_code);
+        if (!payment.length) {
+            data.push(client.client_name);
+        }
     }
+
+    return data;
+}
+//2.Devuelve un listado que muestre solamente los clientes que no han realizado ningún pedido.
+export const getClientsWithoutRequest = async () => {
+    let res = await fetch(`http://localhost:5501/clients`)
+    let clients = await res.json()
+    let data = []
+    for (const client of clients) {
+        const request = await getRequestByCodeClient(client.client_code);
+        if (!request.length) {
+            data.push({
+                code_client: client.client_code,
+                name: client.client_name
+            })
+        }
+    }
+    return data
+}
+// 3. Devuelve un listado que muestre los clientes que no han realizado ningún pago y los que no han realizado ningún pedido.
+export const getClientsWithoutPaymentsAndRequest = async () => {
+    let res = await fetch("http://localhost:5501/clients")
+    let clients = await res.json()
+    let data = []
+    for (let client of clients) {
+        const request = await getRequestByCodeClient(client.client_code);
+        const payment = await getPaymentByClientCode(client.client_code);
+        if ((!payment.length) && (!request.length)) {
+            data.push({
+                code_client: client.client_code,
+                name: client.client_name
+            })
+        }
+    }
+    return data
 }

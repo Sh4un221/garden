@@ -121,6 +121,7 @@ export const getEmployeesWithBosses = async () => {
     }
     return bosses
 }
-
+//Multitabla Composicion externa
+// 4. Devuelve un listado que muestre solamente los empleados que no tienen una oficina asociada.
 
 
