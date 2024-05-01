@@ -1,3 +1,5 @@
+import { getRequestDetailsByProductCode } from "./request_details.js"
+import {getGamaByName} from "./gama.js"
 export const getProductByCode = async (code) => {
     let res = await fetch(`http://localhost:5506/products?code_product=${code}`)
     let data = await res.json()
@@ -18,4 +20,39 @@ export const getProductsWithGammaOrnamentales = async () => {
             })
     })
     return dataUpdate.sort((a, b) => b.price - a.price)
+}
+//8. Devuelve un listado de los productos que nunca han aparecido en un pedido.
+export const getProductsWithoutRequest = async () => {
+    let res = await fetch("http://localhost:5506/products")
+    let products = await res.json()
+    let data = []
+    for (let product of products) {
+        const details = await getRequestDetailsByProductCode(product.code_product)
+        if (!details.length) {
+            data.push({
+                product_code:product.code_product,
+                product_name:product.name,
+                gama:product.gama,       
+            })
+        }
+    }
+    return data.sort((a,b)=>a.id-b.id)
+}
+//9. Devuelve un listado de los productos que nunca han aparecido en un pedido. El resultado debe mostrar el nombre, la descripción y la imagen del producto.
+
+export const getProductsWithoutRequestWithDescription = async () => {
+    let res = await fetch("http://localhost:5506/products")
+    let products = await res.json()
+    let data = []
+    for (let product of products) {
+        const details = await getRequestDetailsByProductCode(product.code_product)
+        if (!details.length) {
+            data.push({
+                product_code:product.code_product,
+                product_name:product.name,
+                description:product.description,   
+            })
+        }
+    }
+    return data.sort((a,b)=>a.id-b.id)
 }

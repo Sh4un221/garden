@@ -24,6 +24,11 @@ export const getNameByEmployeeCode = async (code) => {
     const { name } = dir
     return name
 }
+export const getEmployeeByOfficeCode = async (code) => {
+    let res = await fetch(`http://localhost:5502/employees?code_office=${code}`)
+    let data = await res.json()
+    return data
+}
 // 3. Devuelve un listado con el nombre, apellidos y email de los empleados cuyo jefe tiene un código de jefe igual a 7.
 export const getAllNameSurnamesAndEmailInCargeOfBossSeven = async () => {
     let res = await fetch("http://localhost:5502/employees?code_boss=7")
@@ -189,7 +194,7 @@ export const getEmployeesWithoutClientsAndTheirOffices = async () => {
 export const getEmployeesWithoutOfficeAndWithoutClients = async () => {
     let res = await fetch("http://localhost:5502/employees")
     let employees = await res.json()
-    let data=[]
+    let data = []
     for (let employee of employees) {
         const clients = await getClientByEmployeeCode(employee.employee_code)
         const offices = await getOfficesByCode(employee.code_office)
@@ -197,6 +202,27 @@ export const getEmployeesWithoutOfficeAndWithoutClients = async () => {
             data.push({
                 code: employee.employee_code,
                 name: employee.name
+            })
+        }
+    }
+    return data
+}
+// 12. Devuelve un listado con los datos de los empleados que no tienen clientes asociados y el nombre de su jefe asociado.
+export const getEmployeesWithoutClientsAndTheirBosses = async () => {
+    let res = await fetch("http://localhost:5502/employees")
+    let employees = await res.json();
+    let data = []
+    for (let employee of employees) {
+        const clients = await getClientByEmployeeCode(employee.employee_code)
+        if (employee.code_boss) {
+            var name_boss = await getNameByEmployeeCode(employee.code_boss)
+        } else if (employee.cpde_boss == null) {
+            name_boss = "No tiene"
+        }
+        if (!clients.length) {
+            data.push({
+                name: employee.name,
+                boss_name: name_boss
             })
         }
     }

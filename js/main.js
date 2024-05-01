@@ -1,6 +1,7 @@
 import {
     getAllOfficesCodeAndCity,
     getAllOfficesAndPhonesFromSpain,
+    OfficesExcludingSalesRepsWithFruitPurchases,
 
 } from "./module/offices.js"
 
@@ -13,7 +14,8 @@ import {
     getEmployeesWithoutOffice,
     getEmployeesWithoutClients,
     getEmployeesWithoutClientsAndTheirOffices,
-    getEmployeesWithoutOfficeAndWithoutClients
+    getEmployeesWithoutOfficeAndWithoutClients,
+    getEmployeesWithoutClientsAndTheirBosses
 
 } from "./module/employees.js"
 
@@ -30,7 +32,8 @@ import {
     clientsWhoReceivedTheirRequestLate,
     getClientsWithoutPayments,
     getClientsWithoutRequest,
-    getClientsWithoutPaymentsAndRequest
+    getClientsWithoutPaymentsAndRequest,
+    getClientRequestsWithoutPayments
 
 } from "./module/clients.js"
 import {
@@ -49,10 +52,12 @@ import {
 } from "./module/payments.js"
 
 import {
-    getProductsWithGammaOrnamentales
+    getProductsWithGammaOrnamentales,
+    getProductsWithoutRequest,
+    getProductsWithoutRequestWithDescription,
 } from "./module/products.js"
 import {
-    lisOfProductRangesPurchasedByClient
+    lisOfProductRangesPurchasedByClient,
 } from "./module/request_details.js"
 import { log } from "console"
 
@@ -88,4 +93,9 @@ import { log } from "console"
 // console.log(await getEmployeesWithoutOffice());
 // console.log(await getEmployeesWithoutClients());
 // console.log(await getEmployeesWithoutClientsAndTheirOffices());
-console.log(await getEmployeesWithoutOfficeAndWithoutClients());
+// console.log(await getEmployeesWithoutOfficeAndWithoutClients());
+// console.log(await getProductsWithoutRequest());
+// console.log(await getProductsWithoutRequestWithDescription());
+// console.log(await OfficesExcludingSalesRepsWithFruitPurchases());
+// console.log(await getClientRequestsWithoutPayments());
+// console.log(await getEmployeesWithoutClientsAndTheirBosses());

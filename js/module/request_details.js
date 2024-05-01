@@ -8,8 +8,15 @@ import {
     getClientByCode
 } from "./clients.js"
 
-export const getRequestDetailsByProductCode=async()=>{
-    let res=await fetch("http://localhost:5507/request_details")
+export const getRequestDetailsByProductCode = async (code) => {
+    let res = await fetch(`http://localhost:5507/request_details?product_code=${code}`);
+    let details = await res.json()
+    return details
+}
+export const getRequestDetailsByRequest = async (code) => {
+    let res = await fetch(`http://localhost:5507/request_details?code_request=${code}`);
+    let details = await res.json()
+    return details
 }
 
 // 11. Devuelve un listado de las diferentes gamas de producto que ha comprado cada cliente.
@@ -85,15 +92,15 @@ export const lisOfProductRangesPurchasedByClient = async () => {
         const existingClient = clientsArray.find(client => client.code_client === obj.code_client);
 
         if (existingClient) {
-          if (!existingClient.gama.includes(obj.gama)) {
-            existingClient.gama.push(obj.gama);
-          }
+            if (!existingClient.gama.includes(obj.gama)) {
+                existingClient.gama.push(obj.gama);
+            }
         } else {
-          clientsArray.push({ code_client: obj.code_client, client_name: obj.client_name, gama: [obj.gama] });
+            clientsArray.push({ code_client: obj.code_client, client_name: obj.client_name, gama: [obj.gama] });
         }
-      });
-      
+    });
+
     clientsArray.sort((a, b) => a.code_client - b.code_client);
-    
+
     return clientsArray
 }
