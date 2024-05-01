@@ -8,6 +8,10 @@ import {
     getClientByCode
 } from "./clients.js"
 
+export const getRequestDetailsByProductCode=async()=>{
+    let res=await fetch("http://localhost:5507/request_details")
+}
+
 // 11. Devuelve un listado de las diferentes gamas de producto que ha comprado cada cliente.
 export const lisOfProductRangesPurchasedByClient = async () => {
     let res = await fetch(`http://localhost:5507/request_details`)

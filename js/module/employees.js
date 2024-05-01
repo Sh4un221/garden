@@ -1,3 +1,6 @@
+import { getOfficesByCode } from "./offices.js";
+import { getClientByEmployeeCode } from "./clients.js"
+
 export const getEmployByCode = async (code) => {
     let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
     let dataEmployee = await res.json();
@@ -6,7 +9,7 @@ export const getEmployByCode = async (code) => {
 export const getEmployByCode2 = async (code) => {
     let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
     let dataEmployee = await res.json();
-    let[dir]=dataEmployee
+    let [dir] = dataEmployee
     return dir
 }
 export const getEmployByBossCode = async (code) => {
@@ -123,5 +126,79 @@ export const getEmployeesWithBosses = async () => {
 }
 //Multitabla Composicion externa
 // 4. Devuelve un listado que muestre solamente los empleados que no tienen una oficina asociada.
+// getOfficesByCode
 
+export const getEmployeesWithoutOffice = async () => {
+    let res = await fetch("http://localhost:5502/employees")
+    let employees = await res.json()
+    let data = []
+    for (let employee of employees) {
+        const offices = await getOfficesByCode(employee.code_office)
+        if (!offices.length) {
+            data.push({
+                code: employee.employee_code,
+                name: employee.name
+            })
+        }
+    }
+    return data
+}
+//nota: Todos los empleados del json tienen una oficina asociada pero ya se hizo un test cambiando la asociacion de una oficina a null y funciona
+// 5. Devuelve un listado que muestre solamente los empleados que no tienen un cliente asociado.
+export const getEmployeesWithoutClients = async () => {
+    let res = await fetch("http://localhost:5502/employees")
+    let employees = await res.json()
+    let data = []
+    for (let employee of employees) {
+        const clients = await getClientByEmployeeCode(employee.employee_code)
+        if (!clients.length) {
+            data.push({
+                code: employee.employee_code,
+                name: employee.name
+            })
+        }
+    }
+    return data
+}
+// 6. Devuelve un listado que muestre solamente los empleados que no tienen un cliente asociado junto con los datos de la oficina donde trabajan.
+export const getEmployeesWithoutClientsAndTheirOffices = async () => {
+    const res = await fetch("http://localhost:5502/employees");
+    const employees = await res.json();
+    const data = [];
 
+    for (const employee of employees) {
+        const clients = await getClientByEmployeeCode(employee.employee_code);
+        const offices = await getOfficesByCode(employee.code_office);
+
+        if (clients.length === 0 && offices && offices.length > 0) {
+            const matchingOffice = offices.find(office => office.code_office === employee.code_office);
+            if (matchingOffice) {
+                data.push({
+                    code: employee.employee_code,
+                    name: employee.name,
+                    office: matchingOffice
+                });
+            }
+        }
+    }
+
+    return data;
+}
+
+// 7. Devuelve un listado que muestre los empleados que no tienen una oficina asociada y los que no tienen un cliente asociado.
+export const getEmployeesWithoutOfficeAndWithoutClients = async () => {
+    let res = await fetch("http://localhost:5502/employees")
+    let employees = await res.json()
+    let data=[]
+    for (let employee of employees) {
+        const clients = await getClientByEmployeeCode(employee.employee_code)
+        const offices = await getOfficesByCode(employee.code_office)
+        if (!clients.length || !offices.length) {
+            data.push({
+                code: employee.employee_code,
+                name: employee.name
+            })
+        }
+    }
+    return data
+}

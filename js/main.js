@@ -9,7 +9,11 @@ import {
     getBossesFullnameAndEmail,
     getAllEmployees,
     getEmployeesWithBoss,
-    getEmployeesWithBosses
+    getEmployeesWithBosses,
+    getEmployeesWithoutOffice,
+    getEmployeesWithoutClients,
+    getEmployeesWithoutClientsAndTheirOffices,
+    getEmployeesWithoutOfficeAndWithoutClients
 
 } from "./module/employees.js"
 
@@ -81,3 +85,7 @@ import { log } from "console"
 // console.log(await getClientsWithoutPayments());
 // console.log(await getClientsWithoutRequest());
 // console.log(await getClientsWithoutPaymentsAndRequest());
+// console.log(await getEmployeesWithoutOffice());
+// console.log(await getEmployeesWithoutClients());
+// console.log(await getEmployeesWithoutClientsAndTheirOffices());
+console.log(await getEmployeesWithoutOfficeAndWithoutClients());

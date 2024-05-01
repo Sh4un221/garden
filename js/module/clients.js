@@ -19,6 +19,11 @@ export const getNameByClientCode = async (code) => {
     let { client_name } = dir
     return client_name
 }
+export const getClientByEmployeeCode = async (code) => {
+    let res = await fetch(`http://localhost:5501/clients?code_employee_sales_manager=${code}`)
+    let dataClient = await res.json()
+    return dataClient
+}
 export const getClientByCode = async (code) => {
     let res = await fetch(`http://localhost:5501/clients?client_code=${code}`)
     let dataClient = await res.json()
