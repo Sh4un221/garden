@@ -11,6 +11,15 @@ import {
     clientsWhoReceivedTheirRequestLate,
 
 } from "../module/clients.js";
+
+import{
+    getAllNameSurnamesAndEmailInCargeOfBossSeven,
+    getBossesFullnameAndEmail,
+    getAllEmployees,
+    getEmployeesWithBoss,
+    getEmployeesWithBosses
+}from "../module/employees.js"
+
 export class Mycard extends HTMLElement {
     constructor() {
         super();
@@ -205,6 +214,106 @@ export class Mycard extends HTMLElement {
         i += 1
         });
     }
+    
+    async getAllNameSurnamesAndEmailInCargeOfBossSevenDesign(){
+        let data = await getAllNameSurnamesAndEmailInCargeOfBossSeven();
+        var i = 1
+        data.forEach(val => {
+            this.shadowRoot.innerHTML += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Empleado ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Nombre: </b>${val.nombre}</p>
+                        <p><b>Apellidos: </b>${val.apellidos}</p>
+                        <p><b>email: </b>${val.email}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i += 1
+        });
+    }
+    async getBossesFullnameAndEmailDesign(){
+        let data = await getBossesFullnameAndEmail();
+        data.forEach(val => {
+            this.shadowRoot.innerHTML += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>${val.puesto}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Nombre: </b>${val.nombre}</p>
+                        <p><b>Apellidos: </b>${val.apellidos}</p>
+                        <p><b>email: </b>${val.email}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+    }
+    async getAllEmployeesDesign(){
+        let data = await getAllEmployees();
+        data.forEach(val => {
+            this.shadowRoot.innerHTML += `  
+                <div class="report__card">
+                <div class="card__title">
+                    <div>${val.puesto}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Nombre: </b>${val.nombre}</p>
+                        <p><b>Apellidos: </b>${val.apellidos}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+    }
+    async getEmployeesWithBossDesign(){
+        let data = await getEmployeesWithBoss();
+        var i=1
+        data.forEach(val => {
+            this.shadowRoot.innerHTML += `
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Reporte ${i}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Nombre los empleados: </b>${val.employees}</p>
+                        <p><b>Nombre del jefe </b>${val.nameBoss}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i+=1
+        });
+    }
+    async getEmployeesWithBossesDesign(){
+        let data = await getEmployeesWithBosses();
+        var i=1
+        data.forEach(val => {
+            this.shadowRoot.innerHTML += `
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Datos</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Nombre del empleado: </b>${val.NombreDelTrabajador}</p>
+                        <p><b>Nombre del jefe: </b>${val.NombreDelJefe}</p>
+                        <p><b>Jefe de mi jefe: </b>${val.jefeDelJefe}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            i+=1
+        });
+    }
     static get observedAttributes() {
         return ["logic"];
     }
@@ -219,6 +328,12 @@ export class Mycard extends HTMLElement {
         if (name == "logic" && now == "mtclient_6") this.getOfficeAddressOfClientsFromFuenlabradaDesign()
         if (name == "logic" && now == "mtclient_7") this.getClientsEmployDesign()
         if (name == "logic" && now == "mtclient_10") this.clientsWhoReceivedTheirRequestLateDesign()
+
+        if (name == "logic" && now == "employ_3") this.getAllNameSurnamesAndEmailInCargeOfBossSevenDesign()
+        if (name == "logic" && now == "employ_4") this.getBossesFullnameAndEmailDesign()
+        if (name == "logic" && now == "employ_5") this.getAllEmployeesDesign()
+        if (name == "logic" && now == "mtemploy_8") this.getEmployeesWithBossDesign()
+        if (name == "logic" && now == "mtemploy_9") this.getEmployeesWithBossesDesign()
 
     }
 }
