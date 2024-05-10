@@ -13,7 +13,7 @@ export const getPaymentsByYear = async (year = 2008) => {
         }
     })
     dataUpdate = [... new Set(dataUpdate)]
-    return dataUpdate.sort((a, b) => b - a)
+    return dataUpdate.sort((a, b) => b.total - a.total)
 }
 // 14. Devuelve un listado con todas las formas de pago que aparecen en la tabla `pago`. Tenga en cuenta que no deben aparecer formas de pago repetidas.
 export const getAllPaymentStatus = async () => {
